@@ -1,0 +1,6 @@
+{
+  "name": "Type Garden",
+  "description": "A generative typography garden where organic stems, anime spider lilies, wisteria, sakura, and roses bloom out of letters, featuring live South Indian language translation in Tamil, Telugu, Kannada, and Malayalam.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
