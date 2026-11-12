@@ -4,27 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <title>Type Garden</title>
-    <meta name="description" content="A generative typography garden where organic stems, anime spider lilies, wisteria, sakura, and roses bloom out of letters, featuring live South Indian language translation in Tamil, Telugu, Kannada, and Malayalam." />
+    <meta name="description" content="A generative typography garden where organic stems, anime spider lilies, wisteria, sakura, and roses bloom out of letters." />
     <meta property="og:title" content="Type Garden" />
-    <meta property="og:description" content="A generative typography garden where organic stems, anime spider lilies, wisteria, sakura, and roses bloom out of letters, featuring live South Indian language translation in Tamil, Telugu, Kannada, and Malayalam." />
+    <meta property="og:description" content="A generative typography garden where organic stems, anime spider lilies, wisteria, sakura, and roses bloom out of letters." />
     <meta property="og:type" content="website" />
     <meta name="twitter:card" content="summary_large_image" />
-    <script>
-      // Gracefully prevent unhandled WebSocket/HMR reconnection notices from bubbling
-      window.addEventListener('unhandledrejection', function(e) {
-        if (e.reason && (String(e.reason).includes('WebSocket') || String(e.reason).includes('createWebSocketModuleRunnerTransport'))) {
-          e.preventDefault();
-        }
-      });
-      window.addEventListener('error', function(e) {
-        if (e.message && (e.message.includes('WebSocket') || e.message.includes('createWebSocketModuleRunnerTransport') || (e.filename && e.filename.includes('@vite/client')))) {
-          e.preventDefault();
-        }
-      }, true);
-    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=DM+Mono:wght@400;500&family=Noto+Sans+Kannada:wght@400;600;700&family=Noto+Sans+Malayalam:wght@400;600;700&family=Noto+Sans+Tamil:wght@400;600;700&family=Noto+Sans+Telugu:wght@400;600;700&family=Noto+Serif+Kannada:wght@600;700&family=Noto+Serif+Malayalam:wght@600;700&family=Noto+Serif+Tamil:wght@600;700&family=Noto+Serif+Telugu:wght@600;700&family=Pirata+One&family=Playfair+Display:ital,wght@0,700;1,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=DM+Mono:wght@400;500&family=Pirata+One&family=Playfair+Display:ital,wght@0,700;1,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <style>
       *, *::before, *::after { box-sizing: border-box; }
       html, body {
@@ -571,104 +558,6 @@
       #fauna-cards-scroll::-webkit-scrollbar-thumb:hover {
         background: #E63946;
       }
-
-      /* Translation Hub Quick Language Pills */
-      .trans-hub-lang-pill {
-        border: 0;
-        background: transparent;
-        color: #8E8E9F;
-        font-family: 'DM Mono', monospace;
-        font-size: 11px;
-        font-weight: 500;
-        padding: 3px 9px;
-        border-radius: 999px;
-        cursor: pointer;
-        transition: all 0.15s ease;
-        line-height: 1.2;
-        user-select: none;
-      }
-      .trans-hub-lang-pill:hover:not(.active) {
-        color: #FFFFFF;
-        background: rgba(255, 255, 255, 0.08);
-      }
-      .trans-hub-lang-pill.active {
-        background: #E63946 !important;
-        color: #FFFFFF !important;
-        font-weight: 700 !important;
-        box-shadow: 0 0 10px rgba(230, 57, 70, 0.5);
-      }
-
-      /* Language Model Diff Studio Styling */
-      .diff-card-item {
-        background: #0C0C12;
-        border: 1px solid #1E1E2A;
-        border-radius: 10px;
-        padding: 16px;
-        display: flex;
-        flex-direction: column;
-        gap: 12px;
-        transition: all 0.2s ease;
-        position: relative;
-        overflow: hidden;
-      }
-      .diff-card-item:hover {
-        border-color: #38384C;
-        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
-        transform: translateY(-2px);
-      }
-      .diff-card-item.active-lang {
-        border-color: #E63946;
-        box-shadow: 0 0 16px rgba(230, 57, 70, 0.35);
-      }
-      .diff-grapheme-chip {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        background: #14141E;
-        border: 1px solid #282838;
-        color: #E2E2F0;
-        border-radius: 6px;
-        padding: 4px 8px;
-        font-size: 13px;
-        font-weight: 600;
-        min-width: 28px;
-        transition: all 0.15s ease;
-      }
-      .diff-grapheme-chip:hover {
-        border-color: #E63946;
-        background: #24141C;
-        color: #FFF;
-        transform: scale(1.08);
-      }
-      .diff-action-btn {
-        background: #14141E;
-        border: 1px solid #2B2B3C;
-        color: #CBCBDC;
-        padding: 6px 12px;
-        border-radius: 6px;
-        cursor: pointer;
-        display: inline-flex;
-        align-items: center;
-        gap: 6px;
-        font-size: 11px;
-        font-family: 'DM Mono', monospace;
-        transition: all 0.15s ease;
-      }
-      .diff-action-btn:hover {
-        background: #20202E;
-        color: #FFFFFF;
-        border-color: #4A4A62;
-      }
-      .diff-action-btn.bloom-btn {
-        background: #1B0F14;
-        border-color: #E63946;
-        color: #FF5A68;
-        font-weight: 600;
-      }
-      .diff-action-btn.bloom-btn:hover {
-        background: #E63946;
-        color: #FFFFFF;
-      }
     </style>
   </head>
   <body>
@@ -711,21 +600,6 @@
             </button>
           </div>
 
-          <!-- 3. South Indian Language Trigger -->
-          <div style="position:relative;" id="lang-menu-wrapper">
-            <button id="btn-lang-trigger" class="streamlined-trigger-btn" title="Choose South Indian Language (Tamil, Telugu, Kannada, Malayalam)" style="background:#08080C;border:1px solid #2B2B36;color:#EDEDED;font-family:'DM Mono',monospace;font-size:11px;letter-spacing:0.04em;padding:6px 12px;border-radius:6px;cursor:pointer;display:flex;align-items:center;gap:7px;transition:all 0.15s ease;">
-              <span id="lang-trigger-icon" style="font-size:12px;line-height:1;">🌐</span>
-              <span id="lang-trigger-text" style="font-weight:600;">Lang: தமிழ்</span>
-              <span style="font-size:8px;color:#E63946;margin-left:2px;">▼</span>
-            </button>
-          </div>
-
-          <!-- Translation Mode Pill Group (Semantic Translation vs Phonetic Transliteration) -->
-          <div data-tg="pill-group" id="trans-mode-pill-group" style="margin-left:2px;">
-            <button class="sub-tab active" id="btn-trans-mode-semantic" title="Meaning-based semantic translation">Semantic</button>
-            <button class="sub-tab" id="btn-trans-mode-phonetic" title="Sound-based phonetic transliteration">Phonetic</button>
-          </div>
-
           <!-- Typeface selector (compact) -->
           <div data-tg="pill-group" id="font-pill-group" style="margin-left:4px;">
             <button class="sub-tab active" data-font="cormorant" style="font-family:'Cormorant Garamond',serif;font-weight:600;">Cormorant</button>
@@ -733,7 +607,7 @@
             <button class="sub-tab" data-font="script" style="font-family:'Alex Brush',cursive;font-size:13px;padding:3px 12px;">Script</button>
           </div>
 
-          <!-- Horizontal Sliding Drawer Shelf for Flora, Fauna & Languages -->
+          <!-- Horizontal Sliding Drawer Shelf for Flora & Fauna -->
           <div id="drawer-shelf-container" style="display:none;position:absolute;top:calc(100% + 8px);left:0;z-index:70;background:#0A0A0E;border:1px solid #282836;border-radius:8px;box-shadow:0 14px 40px rgba(0,0,0,0.92);padding:10px 12px;max-width:calc(100vw - 40px);pointer-events:auto;">
             
             <!-- Flora Horizontal Scroll Shelf -->
@@ -765,17 +639,6 @@
               </div>
             </div>
 
-            <!-- South Indian Language Horizontal Scroll Shelf -->
-            <div id="lang-drawer-content" style="display:none;flex-direction:column;gap:8px;">
-              <div style="display:flex;align-items:center;justify-content:space-between;padding-bottom:6px;border-bottom:1px solid #1C1C24;gap:16px;">
-                <span style="font-size:9px;color:#E63946;letter-spacing:0.08em;font-weight:700;text-transform:uppercase;">Live South Indian Translation & Typography</span>
-                <span style="font-size:9px;color:#858596;">Tamil · Telugu · Kannada · Malayalam</span>
-              </div>
-              <div id="lang-cards-scroll" style="display:flex;gap:8px;overflow-x:auto;padding:4px 2px 6px;max-width:740px;scrollbar-width:thin;">
-                <!-- Language cards populated by JS -->
-              </div>
-            </div>
-
           </div>
 
           <!-- Legacy Pill Group Elements for Backward Compatibility -->
@@ -803,74 +666,16 @@
         </div>
 
         <div style="flex-shrink:0;">
-          <div data-tg="pill-group" id="main-view-tabs" style="display:flex;align-items:center;background:#08080C;border:1px solid #262632;border-radius:6px;padding:2px;gap:2px;">
-            <button id="btn-tab-type" class="sub-tab active" data-tab="type" title="Interactive Botanical Typing Garden"><span style="color:#E63946;">🌸</span> Garden</button>
-            <button id="btn-tab-poster" class="sub-tab" data-tab="poster" title="Obsidian Gothic Poster Studio"><span style="color:#C77DFF;">📜</span> Poster</button>
-            <button id="btn-tab-langmodel" class="sub-tab" data-tab="langmodel" title="South Indian Language Model & Diff Studio"><span style="color:#06D6A0;">🌐</span> Diff Tab</button>
-          </div>
+          <button id="btn-goto-poster" class="btn-gothic-mode-nav" title="Switch to Poster Studio" style="background:#050507;border:1px solid #2B2B34;color:#EDEDED;font-family:'DM Mono',monospace;font-size:11px;letter-spacing:0.06em;padding:6px 14px;border-radius:6px;cursor:pointer;display:flex;align-items:center;gap:6px;box-shadow:0 2px 10px rgba(0,0,0,0.6);transition:all 0.15s ease;">
+            <span>Poster Mode</span>
+            <span style="color:#E63946;font-weight:700;">→</span>
+          </button>
           <!-- Hidden compatibility elements -->
           <div style="display:none;">
-            <button id="btn-goto-poster"></button>
             <button id="btn-mode-type"></button>
             <button id="btn-mode-poster"></button>
           </div>
         </div>
-      </div>
-
-      <!-- Floating Live South Indian Botanical Translation HUD Bar -->
-      <div id="tg-live-trans-hub" style="position:fixed;top:calc(66px + env(safe-area-inset-top));left:50%;transform:translateX(-50%);z-index:48;display:flex;flex-direction:column;align-items:center;gap:6px;pointer-events:none;max-width:calc(100vw - 32px);transition:all 0.3s ease;">
-        
-        <!-- Main Dual-Language Capsule -->
-        <div style="background:rgba(10,10,14,0.92);border:1px solid #2B2B38;backdrop-filter:blur(16px);border-radius:999px;padding:4px 8px 4px 14px;box-shadow:0 8px 32px rgba(0,0,0,0.85);display:flex;align-items:center;gap:10px;pointer-events:auto;flex-wrap:wrap;justify-content:center;">
-          
-          <!-- English Input Capsule -->
-          <div style="display:flex;align-items:center;gap:6px;">
-            <span style="font-size:9px;color:#8E8E9F;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;">EN</span>
-            <input id="trans-hub-input" spellcheck="false" placeholder="Type in English..." title="Click to edit English text" style="background:transparent;border:0;outline:none;color:#FFFFFF;font-family:'DM Mono',monospace;font-size:12px;font-weight:500;min-width:80px;max-width:180px;caret-color:#E63946;" value="in bloom" />
-          </div>
-
-          <!-- Botanical Translation Sprout Flow Arrow -->
-          <div style="display:flex;align-items:center;gap:4px;color:#E63946;font-size:11px;">
-            <span style="opacity:0.6;">🌿</span>
-            <span id="trans-hub-flow-arrow" style="font-weight:700;transition:transform 0.2s ease;">➔</span>
-          </div>
-
-          <!-- Quick 4-Language UI Toggle Switcher (Tamil, Telugu, Kannada, Malayalam) without retyping -->
-          <div id="trans-hub-lang-toggle" style="display:inline-flex;align-items:center;background:#0A0A0F;border:1px solid #282836;border-radius:999px;padding:2px;gap:2px;" title="Switch language instantly without re-typing">
-            <button class="trans-hub-lang-pill active" data-lang="ta" title="Switch to Tamil (தமிழ்) - no retyping needed">தமிழ்</button>
-            <button class="trans-hub-lang-pill" data-lang="te" title="Switch to Telugu (తెలుగు) - no retyping needed">తెలుగు</button>
-            <button class="trans-hub-lang-pill" data-lang="kn" title="Switch to Kannada (ಕನ್ನಡ) - no retyping needed">ಕನ್ನಡ</button>
-            <button class="trans-hub-lang-pill" data-lang="ml" title="Switch to Malayalam (മലയാളം) - no retyping needed">മലയാളം</button>
-          </div>
-
-          <!-- Target South Indian Native Script Output Capsule -->
-          <div style="display:flex;align-items:center;gap:8px;background:#14141C;border:1px solid #2D2D3E;border-radius:999px;padding:3px 12px;">
-            <span id="trans-hub-lang-badge" style="font-size:9px;background:#E63946;color:#FFF;padding:1px 6px;border-radius:4px;font-weight:700;letter-spacing:0.04em;">தமிழ்</span>
-            <span id="trans-hub-native-text" style="font-family:'Noto Serif Tamil',serif;font-size:15px;color:#FFFFFF;font-weight:700;letter-spacing:0.02em;">மலர்ந்துள்ளது</span>
-            <span id="trans-hub-romanized" style="font-size:10px;color:#A0A0B2;font-style:italic;">(malarndhulladhu)</span>
-          </div>
-
-          <!-- Interactive Action Buttons -->
-          <div style="display:flex;align-items:center;gap:4px;">
-            <button id="btn-trans-speak" title="Listen to South Indian pronunciation" class="btn-hover" style="background:#181822;border:1px solid #333344;color:#E0E0EC;width:26px;height:26px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:11px;transition:all 0.15s ease;">🔊</button>
-            <button id="btn-trans-copy" title="Copy native script to clipboard" class="btn-hover" style="background:#181822;border:1px solid #333344;color:#E0E0EC;width:26px;height:26px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:11px;transition:all 0.15s ease;">📋</button>
-            <button id="btn-trans-mode-toggle" title="Toggle Semantic / Phonetic mode" style="background:#181822;border:1px solid #333344;color:#B5B5C8;padding:2px 8px;height:26px;border-radius:13px;cursor:pointer;display:flex;align-items:center;gap:4px;font-size:10px;font-family:'DM Mono',monospace;transition:all 0.15s ease;">
-              <span style="color:#E63946;font-size:9px;">⇄</span>
-              <span id="trans-hub-mode-txt">Semantic</span>
-            </button>
-            <button id="btn-open-diff-tab" title="Open South Indian Language Model Diff Studio" class="btn-hover" style="background:#181822;border:1px solid #333344;color:#06D6A0;padding:2px 10px;height:26px;border-radius:13px;cursor:pointer;display:flex;align-items:center;gap:4px;font-size:10px;font-family:'DM Mono',monospace;font-weight:600;transition:all 0.15s ease;">
-              <span>Diff Tab</span>
-              <span style="font-size:9px;">↗</span>
-            </button>
-          </div>
-
-        </div>
-
-        <!-- Curated South Indian Inspiration Bloom Seeds -->
-        <div id="trans-hub-seeds" style="display:flex;gap:5px;align-items:center;flex-wrap:wrap;justify-content:center;pointer-events:auto;max-width:760px;padding:2px 4px;">
-          <!-- Populated by JavaScript according to current South Indian language -->
-        </div>
-
       </div>
 
       <!-- Typing Mode Bottom Bar -->
@@ -914,12 +719,10 @@
           </div>
 
           <div style="display:flex;align-items:center;gap:10px;">
-            <div data-tg="pill-group" style="display:flex;align-items:center;background:#08080C;border:1px solid #262632;border-radius:6px;padding:2px;gap:2px;">
-              <button id="btn-studio-tab-type" class="sub-tab" title="Return to Botanical Typing Garden"><span style="color:#E63946;">🌸</span> Garden</button>
-              <button id="btn-studio-tab-poster" class="sub-tab active" title="Poster Studio"><span style="color:#C77DFF;">📜</span> Poster</button>
-              <button id="btn-studio-tab-langmodel" class="sub-tab" title="South Indian Language Model & Diff Studio"><span style="color:#06D6A0;">🌐</span> Diff Tab</button>
-            </div>
-            <button id="btn-goto-type" style="display:none;"></button>
+            <button id="btn-goto-type" class="btn-gothic-mode-nav" title="Return to Typing Garden" style="background:#111115;border:1px solid #2B2B34;color:#EDEDED;font-family:'DM Mono',monospace;font-size:11px;letter-spacing:0.06em;padding:5px 14px;border-radius:6px;cursor:pointer;display:flex;align-items:center;gap:6px;box-shadow:0 2px 10px rgba(0,0,0,0.6);transition:all 0.15s ease;">
+              <span style="color:#E63946;font-weight:700;">←</span>
+              <span>Type Mode</span>
+            </button>
             <button id="btn-studio-back-type" style="display:none;"></button>
           </div>
         </div>
@@ -941,30 +744,10 @@
             </div>
 
             <!-- Quick Text Input Row & Seed Regrow & Reset Garden -->
-            <div style="padding:12px 14px 8px;display:flex;gap:6px;align-items:center;">
-              <input id="poster-text-input" spellcheck="false" placeholder="Type words in English or native script..." style="flex:1;background:#050507;border:1px solid #282832;border-radius:6px;color:#FFFFFF;font-family:'Cormorant Garamond',serif;font-size:15px;padding:6px 10px;outline:none;" />
+            <div style="padding:12px 14px 10px;display:flex;gap:6px;align-items:center;">
+              <input id="poster-text-input" spellcheck="false" placeholder="Type poster words..." style="flex:1;background:#050507;border:1px solid #282832;border-radius:6px;color:#FFFFFF;font-family:'Cormorant Garamond',serif;font-size:15px;padding:6px 10px;outline:none;" />
               <button id="btn-reshuffle" title="Regrow Garden with New Seed (Auto-Resets Roots)" style="background:#131318;border:1px solid #2B2B36;border-radius:6px;color:#D8D8E2;padding:6px 10px;cursor:pointer;font-size:12px;">↺</button>
               <button id="btn-reset-garden" title="Reset Garden to Pristine State (Canvas, Zoom & Text)" style="background:#181014;border:1px solid #731E2A;border-radius:6px;color:#E63946;padding:6px 10px;cursor:pointer;font-size:12px;font-weight:700;" aria-label="Reset Garden">⌧</button>
-            </div>
-
-            <!-- South Indian Language Suite for Poster Studio -->
-            <div style="padding:0 14px 12px;display:flex;flex-direction:column;gap:6px;">
-              <div style="display:flex;align-items:center;justify-content:space-between;">
-                <span style="font-size:9px;color:#E63946;letter-spacing:0.08em;font-weight:700;text-transform:uppercase;">Language Script</span>
-                <span id="poster-lang-mode-badge" style="font-size:9px;color:#858596;cursor:pointer;" title="Click to toggle Semantic translation / Phonetic transliteration">Semantic Mode ⇄</span>
-              </div>
-              <div id="poster-lang-pill-row" style="display:flex;gap:4px;overflow-x:auto;scrollbar-width:none;">
-                <button class="poster-lang-btn active" data-lang="ta" style="flex:1;background:#181014;border:1px solid #9E1624;color:#FFFFFF;border-radius:4px;padding:4px 6px;font-size:10px;cursor:pointer;text-align:center;">தமிழ்</button>
-                <button class="poster-lang-btn" data-lang="te" style="flex:1;background:#101014;border:1px solid #2B2B38;color:#B5B5C8;border-radius:4px;padding:4px 6px;font-size:10px;cursor:pointer;text-align:center;">తెలుగు</button>
-                <button class="poster-lang-btn" data-lang="kn" style="flex:1;background:#101014;border:1px solid #2B2B38;color:#B5B5C8;border-radius:4px;padding:4px 6px;font-size:10px;cursor:pointer;text-align:center;">ಕನ್ನಡ</button>
-                <button class="poster-lang-btn" data-lang="ml" style="flex:1;background:#101014;border:1px solid #2B2B38;color:#B5B5C8;border-radius:4px;padding:4px 6px;font-size:10px;cursor:pointer;text-align:center;">മലയാളം</button>
-                <button class="poster-lang-btn" data-lang="en" style="flex:1;background:#101014;border:1px solid #2B2B38;color:#B5B5C8;border-radius:4px;padding:4px 6px;font-size:10px;cursor:pointer;text-align:center;">EN</button>
-              </div>
-              <!-- Realtime translated preview line in poster studio -->
-              <div id="poster-trans-preview-box" style="background:#050508;border:1px solid #22222E;border-radius:4px;padding:5px 8px;display:flex;align-items:center;justify-content:space-between;font-size:10px;">
-                <span id="poster-trans-script-display" style="color:#FFF;font-weight:700;font-size:12px;">மலர்ந்துள்ளது</span>
-                <span id="poster-trans-pronounce" style="color:#8E8E9E;font-style:italic;">(malarndhulladhu)</span>
-              </div>
             </div>
 
             <!-- Primary Crimson Export Button Bar -->
@@ -1467,152 +1250,6 @@
           </div>
         </div>
       </div>
-
-      <!-- Language Model Diff Studio Tab -->
-      <div id="langmodel-diff-tab" style="display:none;position:fixed;inset:0;background:#060609;flex-direction:column;font-family:'Plus Jakarta Sans',-apple-system,sans-serif;color:#D8D8E2;user-select:none;z-index:90;overflow:hidden;">
-        
-        <!-- 1. Diff Studio Titlebar -->
-        <div id="diff-titlebar" style="height:42px;background:#0A0A0E;border-bottom:1px solid #1C1C24;display:flex;align-items:center;justify-content:space-between;padding:0 16px;flex-shrink:0;z-index:20;position:relative;">
-          <div style="display:flex;align-items:center;gap:12px;">
-            <div style="display:flex;align-items:center;gap:6px;">
-              <div id="diff-close-dot" title="Return to typing garden (Esc)" style="width:11px;height:11px;border-radius:50%;background:#FF5F56;cursor:pointer;border:1px solid rgba(0,0,0,0.4);"></div>
-              <div style="width:11px;height:11px;border-radius:50%;background:#222228;border:1px solid #33333D;"></div>
-              <div style="width:11px;height:11px;border-radius:50%;background:#222228;border:1px solid #33333D;"></div>
-            </div>
-            <span style="font-size:10px;color:#8E8E9F;letter-spacing:0.08em;font-weight:700;text-transform:uppercase;">Language Model Diff Studio</span>
-            <span style="font-size:9px;background:#151F18;color:#34D399;border:1px solid #1B3B26;padding:2px 8px;border-radius:10px;font-weight:600;">gemini-3.8-flash · 4 Scripts</span>
-          </div>
-
-          <!-- Centered Title -->
-          <div style="position:absolute;left:50%;transform:translateX(-50%);pointer-events:none;display:flex;align-items:center;gap:6px;">
-            <span style="font-family:'DM Mono',monospace;font-size:13px;color:#F0EBF0;font-weight:600;letter-spacing:0.06em;">SOUTH INDIAN MULTI-SCRIPT DIFF</span>
-          </div>
-
-          <!-- Top-right View Tabs -->
-          <div style="display:flex;align-items:center;gap:10px;">
-            <div data-tg="pill-group" style="display:flex;align-items:center;background:#08080C;border:1px solid #262632;border-radius:6px;padding:2px;gap:2px;">
-              <button id="btn-diff-tab-type" class="sub-tab" title="Return to Botanical Typing Garden"><span style="color:#E63946;">🌸</span> Garden</button>
-              <button id="btn-diff-tab-poster" class="sub-tab" title="Gothic Poster Studio"><span style="color:#C77DFF;">📜</span> Poster</button>
-              <button id="btn-diff-tab-langmodel" class="sub-tab active" title="Language Model Diff Studio"><span style="color:#06D6A0;">🌐</span> Diff Tab</button>
-            </div>
-          </div>
-        </div>
-
-        <!-- 2. Diff Studio Workspace (Scrollable Content) -->
-        <div id="diff-workspace" style="flex:1;display:flex;flex-direction:column;overflow-y:auto;overflow-x:hidden;padding:16px 20px 32px;gap:16px;max-width:1440px;margin:0 auto;width:100%;box-sizing:border-box;">
-          
-          <!-- Source Input & Translation Control Center -->
-          <div style="background:#0C0C12;border:1px solid #1F1F2B;border-radius:10px;padding:16px 18px;display:flex;flex-direction:column;gap:12px;box-shadow:0 8px 30px rgba(0,0,0,0.5);">
-            <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;">
-              <div style="display:flex;align-items:center;gap:8px;">
-                <span style="font-size:11px;font-weight:700;color:#E63946;letter-spacing:0.06em;text-transform:uppercase;">Source English Text:</span>
-                <span id="diff-input-stats" style="font-size:10px;color:#78788A;font-family:'DM Mono',monospace;">(7 chars · 2 words)</span>
-              </div>
-
-              <!-- Translation Mode Toggle -->
-              <div style="display:flex;align-items:center;gap:8px;">
-                <span style="font-size:10px;color:#8E8E9F;font-family:'DM Mono',monospace;">Model Mode:</span>
-                <div data-tg="pill-group" id="diff-mode-pill-group" style="display:flex;background:#14141E;border:1px solid #282838;border-radius:6px;padding:2px;gap:2px;">
-                  <button id="btn-diff-mode-sem" class="sub-tab active" title="Semantic meaning translation">Semantic Translation</button>
-                  <button id="btn-diff-mode-pho" class="sub-tab" title="Phonetic ITRANS sound transliteration">Phonetic Transliteration</button>
-                </div>
-              </div>
-            </div>
-
-            <!-- Big Interactive Input Box -->
-            <div style="position:relative;display:flex;align-items:center;">
-              <input id="diff-source-input" type="text" spellcheck="false" placeholder="Type words or sentences in English (e.g. flower in bloom, morning sun, sweet breeze)..." style="width:100%;background:#111118;border:1px solid #2B2B3C;border-radius:8px;padding:10px 40px 10px 14px;color:#FFFFFF;font-family:'DM Mono',monospace;font-size:15px;font-weight:500;outline:none;transition:border-color 0.2s ease;box-shadow:inset 0 2px 6px rgba(0,0,0,0.4);" value="in bloom" />
-              <button id="btn-diff-clear-input" title="Clear text" style="position:absolute;right:10px;background:transparent;border:0;color:#6A6A7D;font-size:14px;cursor:pointer;padding:4px 8px;border-radius:4px;transition:color 0.15s ease;">✕</button>
-            </div>
-
-            <!-- Quick Inspiration Prompt Seeds -->
-            <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap;">
-              <span style="font-size:10px;color:#78788A;font-weight:600;letter-spacing:0.04em;">QUICK PROMPTS:</span>
-              <div id="diff-prompt-chips-row" style="display:flex;gap:6px;flex-wrap:wrap;">
-                <!-- Populated by JS -->
-              </div>
-            </div>
-          </div>
-
-          <!-- Quad-Script Comparative Diff Grid (Tamil, Telugu, Kannada, Malayalam) -->
-          <div>
-            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;padding:0 2px;">
-              <div style="display:flex;align-items:center;gap:8px;">
-                <span style="font-size:11px;font-weight:700;color:#FFFFFF;letter-spacing:0.06em;text-transform:uppercase;">Parallel Script Diff & Botanical Typography</span>
-                <span style="font-size:10px;color:#8E8E9F;">(Real-time across all 4 South Indian languages)</span>
-              </div>
-              <span style="font-size:10px;color:#06D6A0;font-family:'DM Mono',monospace;display:flex;align-items:center;gap:4px;">
-                <span style="width:6px;height:6px;border-radius:50%;background:#06D6A0;display:inline-block;"></span>
-                Autonomous Zero-Latency Engine Active
-              </span>
-            </div>
-
-            <div id="diff-cards-grid" style="display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:14px;">
-              <!-- 4 Cards dynamically rendered by JS -->
-            </div>
-          </div>
-
-          <!-- Bottom Split: Linguistic Root Alignment Inspector + Live Botanical Visualizer -->
-          <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(320px, 1fr));gap:14px;margin-top:6px;">
-            
-            <!-- Linguistic Alignment & Grapheme Breakdown Inspector -->
-            <div style="background:#0C0C12;border:1px solid #1F1F2B;border-radius:10px;padding:16px;display:flex;flex-direction:column;gap:12px;">
-              <div style="display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #1C1C26;padding-bottom:8px;">
-                <span style="font-size:11px;font-weight:700;color:#C77DFF;letter-spacing:0.06em;text-transform:uppercase;">Dravidian Script Diff Alignment</span>
-                <span style="font-size:9px;color:#78788A;font-family:'DM Mono',monospace;">Unicode 15.0 Grapheme Standard</span>
-              </div>
-
-              <!-- Comparative Diff Table -->
-              <div id="diff-alignment-table-wrapper" style="overflow-x:auto;">
-                <table id="diff-alignment-table" style="width:100%;border-collapse:collapse;font-size:12px;text-align:left;">
-                  <thead>
-                    <tr style="border-bottom:1px solid #222230;color:#8E8E9F;font-family:'DM Mono',monospace;font-size:10px;">
-                      <th style="padding:6px 8px;">LANGUAGE</th>
-                      <th style="padding:6px 8px;">SCRIPT OUTPUT</th>
-                      <th style="padding:6px 8px;">SYLLABLES</th>
-                      <th style="padding:6px 8px;">ROMANIZATION</th>
-                    </tr>
-                  </thead>
-                  <tbody id="diff-alignment-tbody">
-                    <!-- Populated by JS -->
-                  </tbody>
-                </table>
-              </div>
-
-              <!-- Syllabic Clustering Info Note -->
-              <div style="background:#101018;border:1px solid #242436;border-radius:6px;padding:8px 12px;font-size:11px;color:#A0A0B5;line-height:1.4;">
-                <span style="color:#E63946;font-weight:700;">Botanical Typography Engine:</span>
-                Each Indic character cluster (Consonant + Halant + Dependent Vowel diacritic) forms an atomic typographical unit. Vines, petals, and butterflies tether to the glyph's ascenders and descenders.
-              </div>
-            </div>
-
-            <!-- Live Botanical Canvas Preview inside Diff Studio -->
-            <div style="background:#0C0C12;border:1px solid #1F1F2B;border-radius:10px;padding:16px;display:flex;flex-direction:column;gap:10px;">
-              <div style="display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #1C1C26;padding-bottom:8px;">
-                <div style="display:flex;align-items:center;gap:8px;">
-                  <span style="font-size:11px;font-weight:700;color:#FF758F;letter-spacing:0.06em;text-transform:uppercase;">Live Script Flora Preview</span>
-                  <span id="diff-active-script-label" style="font-size:10px;background:#1B0E14;border:1px solid #3E1620;color:#FF5A68;padding:1px 6px;border-radius:4px;font-family:'DM Mono',monospace;">Tamil (தமிழ்)</span>
-                </div>
-                <button id="btn-diff-jump-garden" class="btn-hover" style="background:#1B0F14;border:1px solid #E63946;color:#FFFFFF;padding:4px 10px;border-radius:6px;cursor:pointer;font-size:11px;font-family:'DM Mono',monospace;display:flex;align-items:center;gap:5px;">
-                  <span>Open in Garden</span>
-                  <span>→</span>
-                </button>
-              </div>
-
-              <!-- Interactive Mini Canvas Viewport -->
-              <div style="flex:1;min-height:200px;background:#050508;border:1px solid #1E1E2C;border-radius:8px;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;">
-                <canvas id="diff-canvas" width="600" height="240" style="width:100%;height:100%;max-height:240px;display:block;"></canvas>
-                <div id="diff-canvas-hint" style="position:absolute;bottom:8px;left:12px;font-size:10px;color:#606072;font-family:'DM Mono',monospace;pointer-events:none;">
-                  Live blooming flowers & butterflies on native script
-                </div>
-              </div>
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
     </div>
 
     <script>
@@ -1636,570 +1273,6 @@
           cormorant: { name: 'Cormorant', css: '"Cormorant Garamond", Georgia, serif', weight: '700' },
           playfair: { name: 'Playfair', css: '"Playfair Display", Georgia, serif', weight: '700' },
           script: { name: 'Script', css: '"Alex Brush", "Brush Script MT", cursive', weight: '400' }
-        };
-
-        // ==========================================
-        // SOUTH INDIAN LINGUISTICS & TRANSLATION ENGINE
-        // (Tamil, Telugu, Kannada, Malayalam, English)
-        // ==========================================
-        const SOUTH_INDIAN_LANGS = {
-          en: { id: 'en', name: 'English', native: 'English', sub: 'Original Input', flag: '🇬🇧', voice: 'en-US', font: null },
-          ta: { id: 'ta', name: 'Tamil', native: 'தமிழ்', sub: 'செம்மொழி தமிழ் · Classical Tamil', flag: '🇮🇳', voice: 'ta-IN', font: { name: 'Noto Serif Tamil', css: '"Noto Serif Tamil", "Noto Sans Tamil", serif', weight: '700' } },
-          te: { id: 'te', name: 'Telugu', native: 'తెలుగు', sub: 'తేనె తెలుఁగు · Italian of the East', flag: '🇮🇳', voice: 'te-IN', font: { name: 'Noto Serif Telugu', css: '"Noto Serif Telugu", "Noto Sans Telugu", serif', weight: '700' } },
-          kn: { id: 'kn', name: 'Kannada', native: 'ಕನ್ನಡ', sub: 'ಕಸ್ತೂರಿ ಕನ್ನಡ · Royal Kannada', flag: '🇮🇳', voice: 'kn-IN', font: { name: 'Noto Serif Kannada', css: '"Noto Serif Kannada", "Noto Sans Kannada", serif', weight: '700' } },
-          ml: { id: 'ml', name: 'Malayalam', native: 'മലയാളം', sub: 'മലയാള ഭംഗി · Flowing Malayalam', flag: '🇮🇳', voice: 'ml-IN', font: { name: 'Noto Serif Malayalam', css: '"Noto Serif Malayalam", "Noto Sans Malayalam", serif', weight: '700' } }
-        };
-
-        const SOUTH_INDIAN_PROMPTS = {
-          ta: [
-            { en: 'flower', native: 'மலர்', roman: 'malar', icon: '🌸' },
-            { en: 'garden', native: 'தோட்டம்', roman: 'thottam', icon: '🌱' },
-            { en: 'peace', native: 'அமைதி', roman: 'amaidhi', icon: '🕊️' },
-            { en: 'butterfly', native: 'வண்ணத்துப்பூச்சி', roman: 'vannathuppoochchi', icon: '🦋' },
-            { en: 'in bloom', native: 'மலர்ந்துள்ளது', roman: 'malarndhulladhu', icon: '🌺' },
-            { en: 'vanakkam', native: 'வணக்கம்', roman: 'vanakkam', icon: '🙏' },
-            { en: 'divine lotus', native: 'தாமரை', roman: 'thamarai', icon: '🪷' },
-            { en: 'sweet breeze', native: 'தென்றல்', roman: 'thendral', icon: '🍃' }
-          ],
-          te: [
-            { en: 'flower', native: 'పువ్వు', roman: 'puvvu', icon: '🌸' },
-            { en: 'garden', native: 'తోట', roman: 'thota', icon: '🌱' },
-            { en: 'peace', native: 'శాంతి', roman: 'shanthi', icon: '🕊️' },
-            { en: 'butterfly', native: 'సీతాకోకచిలుక', roman: 'seethakokachiluka', icon: '🦋' },
-            { en: 'in bloom', native: 'వికసిస్తోంది', roman: 'vikasistondi', icon: '🌺' },
-            { en: 'namaskaram', native: 'నమస్కారం', roman: 'namaskaram', icon: '🙏' },
-            { en: 'divine lotus', native: 'తామర', roman: 'thamara', icon: '🪷' },
-            { en: 'sweet breeze', native: 'చల్లని గాలి', roman: 'challani gaali', icon: '🍃' }
-          ],
-          kn: [
-            { en: 'flower', native: 'ಹೂವು', roman: 'hoovu', icon: '🌸' },
-            { en: 'garden', native: 'ತೋಟ', roman: 'thota', icon: '🌱' },
-            { en: 'peace', native: 'ಶಾಂತಿ', roman: 'shanthi', icon: '🕊️' },
-            { en: 'butterfly', native: 'ಚಿಟ್ಟೆ', roman: 'chitte', icon: '🦋' },
-            { en: 'in bloom', native: 'ಅರಳುತ್ತಿದೆ', roman: 'araluttide', icon: '🌺' },
-            { en: 'namaskara', native: 'ನಮಸ್ಕಾರ', roman: 'namaskara', icon: '🙏' },
-            { en: 'divine lotus', native: 'ಕಮಲ', roman: 'kamala', icon: '🪷' },
-            { en: 'sweet breeze', native: 'ತಂಗಾಳಿ', roman: 'thangaali', icon: '🍃' }
-          ],
-          ml: [
-            { en: 'flower', native: 'പൂവ്', roman: 'poov', icon: '🌸' },
-            { en: 'garden', native: 'തോട്ടം', roman: 'thottam', icon: '🌱' },
-            { en: 'peace', native: 'സമാധാനം', roman: 'samadhaanam', icon: '🕊️' },
-            { en: 'butterfly', native: 'ചിത്രശലഭം', roman: 'chithrashalabham', icon: '🦋' },
-            { en: 'in bloom', native: 'വിരിഞ്ഞുനിൽക്കുന്നു', roman: 'virinjnillkkunnu', icon: '🌺' },
-            { en: 'namaskaram', native: 'നമസ്കാരം', roman: 'namaskaram', icon: '🙏' },
-            { en: 'divine lotus', native: 'താമര', roman: 'thaamara', icon: '🪷' },
-            { en: 'sweet breeze', native: 'കുളിർകാറ്റ്', roman: 'kulirkaattu', icon: '🍃' }
-          ],
-          en: [
-            { en: 'flower', native: 'flower', roman: 'flower', icon: '🌸' },
-            { en: 'garden', native: 'garden', roman: 'garden', icon: '🌱' },
-            { en: 'peace', native: 'peace', roman: 'peace', icon: '🕊️' },
-            { en: 'butterfly', native: 'butterfly', roman: 'butterfly', icon: '🦋' },
-            { en: 'in bloom', native: 'in bloom', roman: 'in bloom', icon: '🌺' },
-            { en: 'sweet breeze', native: 'sweet breeze', roman: 'sweet breeze', icon: '🍃' }
-          ]
-        };
-
-        const SOUTH_INDIAN_DICT = {
-          'in bloom': {
-            ta: { translatedText: 'மலர்ந்துள்ளது', romanized: 'malarndhulladhu' },
-            te: { translatedText: 'వికసిస్తోంది', romanized: 'vikasistondi' },
-            kn: { translatedText: 'ಅರಳುತ್ತಿದೆ', romanized: 'araluttide' },
-            ml: { translatedText: 'വിരിഞ്ഞുനിൽക്കുന്നു', romanized: 'virinjnillkkunnu' }
-          },
-          'bloom': {
-            ta: { translatedText: 'மலர்ச்சி', romanized: 'malarchchi' },
-            te: { translatedText: 'వికసించు', romanized: 'vikasinchu' },
-            kn: { translatedText: 'ಅರಳು', romanized: 'aralu' },
-            ml: { translatedText: 'വിരിയുക', romanized: 'viriyuka' }
-          },
-          'blooming': {
-            ta: { translatedText: 'மலர்கிறது', romanized: 'malargiradhu' },
-            te: { translatedText: 'వికసిస్తున్నది', romanized: 'vikasisthunnadi' },
-            kn: { translatedText: 'ಅರಳುತ್ತಿದೆ', romanized: 'araluttide' },
-            ml: { translatedText: 'വിരിയുന്നു', romanized: 'viriyunnu' }
-          },
-          'flower': {
-            ta: { translatedText: 'மலர்', romanized: 'malar' },
-            te: { translatedText: 'పువ్వు', romanized: 'puvvu' },
-            kn: { translatedText: 'ಹೂವು', romanized: 'hoovu' },
-            ml: { translatedText: 'പൂവ്', romanized: 'poov' }
-          },
-          'flowers': {
-            ta: { translatedText: 'மலர்கள்', romanized: 'malargal' },
-            te: { translatedText: 'పువ్వులు', romanized: 'puvvulu' },
-            kn: { translatedText: 'ಹೂಗಳು', romanized: 'hoogalu' },
-            ml: { translatedText: 'പൂക്കൾ', romanized: 'pookkal' }
-          },
-          'rose': {
-            ta: { translatedText: 'ரோஜா', romanized: 'roja' },
-            te: { translatedText: 'గులాబీ', romanized: 'gulabi' },
-            kn: { translatedText: 'ಗುಲಾಬಿ', romanized: 'gulabi' },
-            ml: { translatedText: 'റോസ്', romanized: 'rose' }
-          },
-          'roses': {
-            ta: { translatedText: 'ரோஜாக்கள்', romanized: 'rojaakkal' },
-            te: { translatedText: 'గులాబీలు', romanized: 'gulabeelu' },
-            kn: { translatedText: 'ಗುಲಾಬಿಗಳು', romanized: 'gulabigalu' },
-            ml: { translatedText: 'റോസപ്പൂക്കൾ', romanized: 'rosappookkal' }
-          },
-          'garden': {
-            ta: { translatedText: 'தோட்டம்', romanized: 'thottam' },
-            te: { translatedText: 'తోట', romanized: 'thota' },
-            kn: { translatedText: 'ತೋಟ', romanized: 'thota' },
-            ml: { translatedText: 'തോട്ടം', romanized: 'thottam' }
-          },
-          'type garden': {
-            ta: { translatedText: 'எழுத்துத் தோட்டம்', romanized: 'ezhuthuth thottam' },
-            te: { translatedText: 'అక్షర తోట', romanized: 'akshara thota' },
-            kn: { translatedText: 'ಅಕ್ಷರ ತೋಟ', romanized: 'akshara thota' },
-            ml: { translatedText: 'അക്ഷരത്തോട്ടം', romanized: 'aksharathottam' }
-          },
-          'peace': {
-            ta: { translatedText: 'அமைதி', romanized: 'amaidhi' },
-            te: { translatedText: 'శాంతి', romanized: 'shanthi' },
-            kn: { translatedText: 'ಶಾಂತಿ', romanized: 'shanthi' },
-            ml: { translatedText: 'സമാധാനം', romanized: 'samadhaanam' }
-          },
-          'love': {
-            ta: { translatedText: 'அன்பு', romanized: 'anbu' },
-            te: { translatedText: 'ప్రేమ', romanized: 'prema' },
-            kn: { translatedText: 'ಪ್ರೀತಿ', romanized: 'preethi' },
-            ml: { translatedText: 'സ്നേഹം', romanized: 'sneham' }
-          },
-          'nature': {
-            ta: { translatedText: 'இயற்கை', romanized: 'iyarkai' },
-            te: { translatedText: 'ప్రకృతి', romanized: 'prakruthi' },
-            kn: { translatedText: 'ಪ್ರಕೃತಿ', romanized: 'prakruthi' },
-            ml: { translatedText: 'പ്രകൃതി', romanized: 'prakrithi' }
-          },
-          'butterfly': {
-            ta: { translatedText: 'வண்ணத்துப்பூச்சி', romanized: 'vannathuppoochchi' },
-            te: { translatedText: 'సీతాకోకచిలుక', romanized: 'seethakokachiluka' },
-            kn: { translatedText: 'ಚಿಟ್ಟೆ', romanized: 'chitte' },
-            ml: { translatedText: 'ചിത്രശലഭം', romanized: 'chithrashalabham' }
-          },
-          'butterflies': {
-            ta: { translatedText: 'வண்ணத்துப்பூச்சிகள்', romanized: 'vannathuppoochchigal' },
-            te: { translatedText: 'సీతాకోకచిలుకలు', romanized: 'seethakokachilukalu' },
-            kn: { translatedText: 'ಚಿಟ್ಟೆಗಳು', romanized: 'chittegalu' },
-            ml: { translatedText: 'ചിത്രശലഭങ്ങൾ', romanized: 'chithrashalabhangal' }
-          },
-          'beauty': {
-            ta: { translatedText: 'அழகு', romanized: 'azhagu' },
-            te: { translatedText: 'అందం', romanized: 'andam' },
-            kn: { translatedText: 'ಸೌಂದರ್ಯ', romanized: 'sowndarya' },
-            ml: { translatedText: 'സൗന്ദര്യം', romanized: 'soundaryam' }
-          },
-          'beautiful': {
-            ta: { translatedText: 'அழகான', romanized: 'azhagaana' },
-            te: { translatedText: 'అందమైన', romanized: 'andamaina' },
-            kn: { translatedText: 'ಸುಂದರ', romanized: 'sundara' },
-            ml: { translatedText: 'മനോഹരമായ', romanized: 'manoharamaaya' }
-          },
-          'vanakkam': {
-            ta: { translatedText: 'வணக்கம்', romanized: 'vanakkam' },
-            te: { translatedText: 'నమస్కారం', romanized: 'namaskaram' },
-            kn: { translatedText: 'ನಮಸ್ಕಾರ', romanized: 'namaskara' },
-            ml: { translatedText: 'നമസ്കാരം', romanized: 'namaskaram' }
-          },
-          'namaste': {
-            ta: { translatedText: 'வணக்கம்', romanized: 'vanakkam' },
-            te: { translatedText: 'నమస్తే', romanized: 'namaste' },
-            kn: { translatedText: 'ನಮಸ್ತೆ', romanized: 'namaste' },
-            ml: { translatedText: 'നമസ്തേ', romanized: 'namaste' }
-          },
-          'namaskaram': {
-            ta: { translatedText: 'வணக்கம்', romanized: 'vanakkam' },
-            te: { translatedText: 'నమస్కారం', romanized: 'namaskaram' },
-            kn: { translatedText: 'ನಮಸ್ಕಾರ', romanized: 'namaskara' },
-            ml: { translatedText: 'നമസ്കാരം', romanized: 'namaskaram' }
-          },
-          'hello': {
-            ta: { translatedText: 'வணக்கம்', romanized: 'vanakkam' },
-            te: { translatedText: 'హలో', romanized: 'halo' },
-            kn: { translatedText: 'ನಮಸ್ಕಾರ', romanized: 'namaskara' },
-            ml: { translatedText: 'ഹലോ', romanized: 'halo' }
-          },
-          'welcome': {
-            ta: { translatedText: 'நல்வரவு', romanized: 'nalvaravu' },
-            te: { translatedText: 'స్వాగతం', romanized: 'swaagatham' },
-            kn: { translatedText: 'ಸ್ವಾಗತ', romanized: 'swaagatha' },
-            ml: { translatedText: 'സ്വാഗതം', romanized: 'swaagatham' }
-          },
-          'spring': {
-            ta: { translatedText: 'வசந்தம்', romanized: 'vasantham' },
-            te: { translatedText: 'వసంతం', romanized: 'vasantham' },
-            kn: { translatedText: 'ವಸಂತ', romanized: 'vasantha' },
-            ml: { translatedText: 'വസന്തം', romanized: 'vasantham' }
-          },
-          'tree': {
-            ta: { translatedText: 'மரம்', romanized: 'maram' },
-            te: { translatedText: 'చెట్టు', romanized: 'chettu' },
-            kn: { translatedText: 'ಮರ', romanized: 'mara' },
-            ml: { translatedText: 'മരം', romanized: 'maram' }
-          },
-          'leaf': {
-            ta: { translatedText: 'இலை', romanized: 'ilai' },
-            te: { translatedText: 'ఆకు', romanized: 'aaku' },
-            kn: { translatedText: 'ಎಲೆ', romanized: 'ele' },
-            ml: { translatedText: 'ഇല', romanized: 'ila' }
-          },
-          'leaves': {
-            ta: { translatedText: 'இலைகள்', romanized: 'ilaigal' },
-            te: { translatedText: 'ఆకులు', romanized: 'aakulu' },
-            kn: { translatedText: 'ಎಲೆಗಳು', romanized: 'elegalu' },
-            ml: { translatedText: 'ഇലകൾ', romanized: 'ilakal' }
-          },
-          'lotus': {
-            ta: { translatedText: 'தாமரை', romanized: 'thamarai' },
-            te: { translatedText: 'తామర', romanized: 'thamara' },
-            kn: { translatedText: 'ಕಮಲ', romanized: 'kamala' },
-            ml: { translatedText: 'താമര', romanized: 'thaamara' }
-          },
-          'divine lotus': {
-            ta: { translatedText: 'தாமரை மலர்', romanized: 'thamarai malar' },
-            te: { translatedText: 'దివ్య తామర', romanized: 'divya thamara' },
-            kn: { translatedText: 'ಕಮಲದ ಹೂವು', romanized: 'kamalada hoovu' },
-            ml: { translatedText: 'താമരപ്പൂവ്', romanized: 'thaamarappoov' }
-          },
-          'sun': {
-            ta: { translatedText: 'சூரியன்', romanized: 'sooriyan' },
-            te: { translatedText: 'సూర్యుడు', romanized: 'sooryudu' },
-            kn: { translatedText: 'ಸೂರ್ಯ', romanized: 'soorya' },
-            ml: { translatedText: 'സൂര്യൻ', romanized: 'sooryan' }
-          },
-          'morning sun': {
-            ta: { translatedText: 'விடியல் சூரியன்', romanized: 'vidiyal sooriyan' },
-            te: { translatedText: 'ఉదయ సూర్యుడు', romanized: 'udaya sooryudu' },
-            kn: { translatedText: 'ಬೆಳಗಿನ ಸೂರ್ಯ', romanized: 'belagina soorya' },
-            ml: { translatedText: 'പ്രഭാത സൂര്യൻ', romanized: 'prabhaatha sooryan' }
-          },
-          'moon': {
-            ta: { translatedText: 'நிலா', romanized: 'nila' },
-            te: { translatedText: 'చంద్రుడు', romanized: 'chandrudu' },
-            kn: { translatedText: 'ಚಂದ್ರ', romanized: 'chandra' },
-            ml: { translatedText: 'ചന്ദ്രൻ', romanized: 'chandran' }
-          },
-          'star': {
-            ta: { translatedText: 'நட்சத்திரம்', romanized: 'natchathiram' },
-            te: { translatedText: 'నక్షత్రం', romanized: 'nakshatram' },
-            kn: { translatedText: 'ನಕ್ಷತ್ರ', romanized: 'nakshatra' },
-            ml: { translatedText: 'നക്ഷത്രം', romanized: 'nakshathram' }
-          },
-          'stars': {
-            ta: { translatedText: 'நட்சத்திரங்கள்', romanized: 'natchathirangal' },
-            te: { translatedText: 'నక్షత్రాలు', romanized: 'nakshathraalu' },
-            kn: { translatedText: 'ನಕ್ಷತ್ರಗಳು', romanized: 'nakshatragalu' },
-            ml: { translatedText: 'നക്ഷത്രങ്ങൾ', romanized: 'nakshathrangal' }
-          },
-          'rain': {
-            ta: { translatedText: 'மழை', romanized: 'mazhai' },
-            te: { translatedText: 'వర్షం', romanized: 'varsham' },
-            kn: { translatedText: 'ಮಳೆ', romanized: 'male' },
-            ml: { translatedText: 'മഴ', romanized: 'mazha' }
-          },
-          'dream': {
-            ta: { translatedText: 'கனவு', romanized: 'kanavu' },
-            te: { translatedText: 'కల', romanized: 'kala' },
-            kn: { translatedText: 'ಕನಸು', romanized: 'kanasu' },
-            ml: { translatedText: 'സ്വപ്നം', romanized: 'swapnam' }
-          },
-          'life': {
-            ta: { translatedText: 'வாழ்க்கை', romanized: 'vaazhkkai' },
-            te: { translatedText: 'జీవితం', romanized: 'jeevitham' },
-            kn: { translatedText: 'ಜೀವನ', romanized: 'jeevana' },
-            ml: { translatedText: 'ജീവിതം', romanized: 'jeevitham' }
-          },
-          'heart': {
-            ta: { translatedText: 'இதயம்', romanized: 'idhayam' },
-            te: { translatedText: 'హృదయం', romanized: 'hrudayam' },
-            kn: { translatedText: 'ಹೃದಯ', romanized: 'hrudaya' },
-            ml: { translatedText: 'ഹൃദയം', romanized: 'hrudhayam' }
-          },
-          'breeze': {
-            ta: { translatedText: 'தென்றல்', romanized: 'thendral' },
-            te: { translatedText: 'చల్లని గాలి', romanized: 'challani gaali' },
-            kn: { translatedText: 'ತಂಗಾಳಿ', romanized: 'thangaali' },
-            ml: { translatedText: 'കുളിർകാറ്റ്', romanized: 'kulirkaattu' }
-          },
-          'sweet breeze': {
-            ta: { translatedText: 'இனிய தென்றல்', romanized: 'iniya thendral' },
-            te: { translatedText: 'చల్లని పిల్లగాలి', romanized: 'challani pillagaali' },
-            kn: { translatedText: 'ತಂಪಾದ ತಂಗಾಳಿ', romanized: 'thampaada thangaali' },
-            ml: { translatedText: 'മന്ദമാരുതൻ', romanized: 'mandamaaruthan' }
-          },
-          'song': {
-            ta: { translatedText: 'பாடல்', romanized: 'paadal' },
-            te: { translatedText: 'పాట', romanized: 'paata' },
-            kn: { translatedText: 'ಹಾಡು', romanized: 'haadu' },
-            ml: { translatedText: 'പാട്ട്', romanized: 'paattu' }
-          },
-          'music': {
-            ta: { translatedText: 'இசை', romanized: 'isai' },
-            te: { translatedText: 'సంగీతం', romanized: 'sangeetham' },
-            kn: { translatedText: 'ಸಂಗೀತ', romanized: 'sangeetha' },
-            ml: { translatedText: 'സംഗീതം', romanized: 'sangeetham' }
-          },
-          'light': {
-            ta: { translatedText: 'ஒளி', romanized: 'oli' },
-            te: { translatedText: 'వెలుగు', romanized: 'velugu' },
-            kn: { translatedText: 'ಬೆಳಕು', romanized: 'belaku' },
-            ml: { translatedText: 'വെളിച്ചം', romanized: 'velicham' }
-          },
-          'water': {
-            ta: { translatedText: 'நீர்', romanized: 'neer' },
-            te: { translatedText: 'నీరు', romanized: 'neeru' },
-            kn: { translatedText: 'ನೀರು', romanized: 'neeru' },
-            ml: { translatedText: 'വെള്ളം', romanized: 'vellam' }
-          },
-          'smile': {
-            ta: { translatedText: 'புன்னகை', romanized: 'punnagai' },
-            te: { translatedText: 'చిరునవ్వు', romanized: 'chirunavvu' },
-            kn: { translatedText: 'ಕಿರುನಗೆ', romanized: 'kirunage' },
-            ml: { translatedText: 'പുഞ്ചിരി', romanized: 'punchiri' }
-          },
-          'hope': {
-            ta: { translatedText: 'நம்பிக்கை', romanized: 'nambikkai' },
-            te: { translatedText: 'ఆశ', romanized: 'aasha' },
-            kn: { translatedText: 'ಭರವಸೆ', romanized: 'bharavase' },
-            ml: { translatedText: 'പ്രതീക്ഷ', romanized: 'pratheeksha' }
-          },
-          'grace': {
-            ta: { translatedText: 'அருள்', romanized: 'arul' },
-            te: { translatedText: 'అనుగ్రహం', romanized: 'anugraham' },
-            kn: { translatedText: 'ಕೃಪೆ', romanized: 'krupe' },
-            ml: { translatedText: 'കൃപ', romanized: 'krupa' }
-          },
-          'sky': {
-            ta: { translatedText: 'வானம்', romanized: 'vaanam' },
-            te: { translatedText: 'ఆకాశం', romanized: 'aakaasham' },
-            kn: { translatedText: 'ಆಕಾಶ', romanized: 'aakaasha' },
-            ml: { translatedText: 'ആകാശം', romanized: 'aakaasham' }
-          },
-          'earth': {
-            ta: { translatedText: 'பூமி', romanized: 'bhoomi' },
-            te: { translatedText: 'భూమి', romanized: 'bhoomi' },
-            kn: { translatedText: 'ಭೂಮಿ', romanized: 'bhoomi' },
-            ml: { translatedText: 'ഭൂമി', romanized: 'bhoomi' }
-          },
-          'fragrance': {
-            ta: { translatedText: 'நறுமணம்', romanized: 'narumanam' },
-            te: { translatedText: 'సువాసన', romanized: 'suvaasana' },
-            kn: { translatedText: 'ಸುಗಂಧ', romanized: 'sugandha' },
-            ml: { translatedText: 'സുഗന്ധം', romanized: 'sugandham' }
-          },
-          'freedom': {
-            ta: { translatedText: 'சுதந்திரம்', romanized: 'sudhandhiram' },
-            te: { translatedText: 'స్వేచ్ఛ', romanized: 'swechha' },
-            kn: { translatedText: 'ಸ್ವಾತಂತ್ರ್ಯ', romanized: 'swathanthrya' },
-            ml: { translatedText: 'സ്വാതന്ത്ര്യം', romanized: 'swaathanthryam' }
-          },
-          'joy': {
-            ta: { translatedText: 'மகிழ்ச்சி', romanized: 'magizhchchi' },
-            te: { translatedText: 'సంతోషం', romanized: 'santhosham' },
-            kn: { translatedText: 'ಸಂತೋಷ', romanized: 'santhosha' },
-            ml: { translatedText: 'സന്തോഷം', romanized: 'santhosham' }
-          },
-          'bliss': {
-            ta: { translatedText: 'பேரின்பம்', romanized: 'paerinbam' },
-            te: { translatedText: 'పరమానందం', romanized: 'paramaanandam' },
-            kn: { translatedText: 'ಪರಮಾನಂದ', romanized: 'paramaananda' },
-            ml: { translatedText: 'ആനന്ദം', romanized: 'aanandam' }
-          },
-          'soul': {
-            ta: { translatedText: 'ஆன்மா', romanized: 'aanma' },
-            te: { translatedText: 'ఆత్మ', romanized: 'aathma' },
-            kn: { translatedText: 'ಆತ್ಮ', romanized: 'aathma' },
-            ml: { translatedText: 'ആത്മാവ്', romanized: 'aathmaavu' }
-          },
-          'friend': {
-            ta: { translatedText: 'நண்பன்', romanized: 'nanban' },
-            te: { translatedText: 'స్నేహితుడు', romanized: 'snehithudu' },
-            kn: { translatedText: 'ಗೆಳೆಯ', romanized: 'geleya' },
-            ml: { translatedText: 'സുഹൃത്ത്', romanized: 'suhruth' }
-          },
-          'wild': {
-            ta: { translatedText: 'காட்டு', romanized: 'kaattu' },
-            te: { translatedText: 'వన్య', romanized: 'vanya' },
-            kn: { translatedText: 'ಕಾಡು', romanized: 'kaadu' },
-            ml: { translatedText: 'വന്യ', romanized: 'vanya' }
-          },
-          'zen': {
-            ta: { translatedText: 'தியானம்', romanized: 'dhiyaanam' },
-            te: { translatedText: 'ధ్యానం', romanized: 'dhyaanam' },
-            kn: { translatedText: 'ಧ್ಯಾನ', romanized: 'dhyaana' },
-            ml: { translatedText: 'ധ്യാനം', romanized: 'dhyaanam' }
-          }
-        };
-
-        // Grapheme cluster splitter for Indic typography ligatures and diacritics
-        function cleanGraphemes(text) {
-          if (!text) return [];
-          if (typeof Intl !== 'undefined' && Intl.Segmenter) {
-            const seg = new Intl.Segmenter('und', { granularity: 'grapheme' });
-            return Array.from(seg.segment(text), s => s.segment);
-          }
-          return Array.from(text);
-        }
-
-        // Rule-Based South Indian Phonetic Transliterator (ITRANS sound mapping)
-        const IndicTransliterator = {
-          tables: {
-            ta: {
-              vowels: {
-                a: 'அ', aa: 'ஆ', A: 'ஆ', i: 'இ', ii: 'ஈ', ee: 'ஈ', I: 'ஈ',
-                u: 'உ', uu: 'ஊ', oo: 'ஊ', U: 'ஊ', e: 'எ', E: 'ஏ', ae: 'ஏ',
-                ai: 'ஐ', o: 'ஒ', O: 'ஓ', oa: 'ஓ', au: 'ஔ', ou: 'ஔ'
-              },
-              vowelSigns: {
-                a: '', aa: 'ா', A: 'ா', i: 'ி', ii: 'ீ', ee: 'ீ', I: 'ீ',
-                u: 'ு', uu: 'ூ', oo: 'ூ', U: 'ூ', e: 'ெ', E: 'ே', ae: 'ே',
-                ai: 'ை', o: 'ொ', O: 'ோ', oa: 'ோ', au: 'ௌ', ou: 'ௌ'
-              },
-              virama: '்',
-              cons: {
-                k: 'க', g: 'க', kh: 'க', gh: 'க', ng: 'ங',
-                ch: 'ச', s: 'ச', c: 'ச', j: 'ஜ', nj: 'ஞ',
-                t: 'ட', d: 'ட', th: 'த', dh: 'த', N: 'ண',
-                n: 'ந', p: 'ப', b: 'ப', f: 'ப', m: 'ம',
-                y: 'ய', r: 'ர', l: 'ல', v: 'வ', w: 'வ',
-                zh: 'ழ', L: 'ள', R: 'ற', sh: 'ஷ', h: 'ஹ'
-              }
-            },
-            te: {
-              vowels: {
-                a: 'అ', aa: 'ఆ', A: 'ఆ', i: 'ఇ', ii: 'ఈ', ee: 'ఈ',
-                u: 'ఉ', uu: 'ఊ', oo: 'ఊ', e: 'ఎ', E: 'ఏ', ae: 'ఏ',
-                ai: 'ఐ', o: 'ఒ', O: 'ఓ', oa: 'ఓ', au: 'ఔ', ou: 'ఔ'
-              },
-              vowelSigns: {
-                a: '', aa: 'ా', A: 'ా', i: 'ి', ii: 'ీ', ee: 'ీ',
-                u: 'ు', uu: 'ూ', oo: 'ూ', e: 'ె', E: 'ే', ae: 'ే',
-                ai: 'ై', o: 'ొ', O: 'ో', oa: 'ో', au: 'ౌ', ou: 'ౌ'
-              },
-              virama: '్',
-              cons: {
-                k: 'క', kh: 'ఖ', g: 'గ', gh: 'ఘ',
-                ch: 'చ', chh: 'ఛ', j: 'జ', jh: 'ఝ',
-                t: 'ట', th: 'త', d: 'డ', dh: 'ధ', N: 'ణ',
-                n: 'న', p: 'ప', ph: 'ఫ', f: 'ఫ', b: 'బ', bh: 'భ',
-                m: 'మ', y: 'య', r: 'ర', l: 'ల', v: 'వ', w: 'వ',
-                sh: 'శ', s: 'స', h: 'హ', L: 'ళ'
-              }
-            },
-            kn: {
-              vowels: {
-                a: 'ಅ', aa: 'ಆ', A: 'ಆ', i: 'ಇ', ii: 'ಈ', ee: 'ಈ',
-                u: 'ಉ', uu: 'ಊ', oo: 'ಊ', e: 'ಎ', E: 'ಏ', ae: 'ಏ',
-                ai: 'ಐ', o: 'ಒ', O: 'ಓ', oa: 'ಓ', au: 'ಔ', ou: 'ಔ'
-              },
-              vowelSigns: {
-                a: '', aa: 'ಾ', A: 'ಾ', i: 'ಿ', ii: 'ೀ', ee: 'ೀ',
-                u: 'ು', uu: 'ೂ', oo: 'ೂ', e: 'ೆ', E: 'ೇ', ae: 'ೇ',
-                ai: 'ೈ', o: 'ೊ', O: 'ೋ', oa: 'ೋ', au: 'ೌ', ou: 'ೌ'
-              },
-              virama: '್',
-              cons: {
-                k: 'ಕ', kh: 'ಖ', g: 'ಗ', gh: 'ಘ',
-                ch: 'ಚ', chh: 'ಛ', j: 'ಜ', jh: 'ಝ',
-                t: 'ಟ', th: 'ತ', d: 'ಡ', dh: 'ಧ', N: 'ಣ',
-                n: 'ನ', p: 'ಪ', ph: 'ಫ', f: 'ಫ', b: 'ಬ', bh: 'ಭ',
-                m: 'ಮ', y: 'ಯ', r: 'ರ', l: 'ಲ', v: 'ವ', w: 'ವ',
-                sh: 'ಶ', s: 'ಸ', h: 'ಹ', L: 'ಳ'
-              }
-            },
-            ml: {
-              vowels: {
-                a: 'അ', aa: 'ആ', A: 'ആ', i: 'ഇ', ii: 'ഈ', ee: 'ഈ',
-                u: 'ഉ', uu: 'ഊ', oo: 'ഊ', e: 'എ', E: 'ഏ', ae: 'ഏ',
-                ai: 'ഐ', o: 'ഒ', O: 'ഓ', oa: 'ഓ', au: 'ഔ', ou: 'ഔ'
-              },
-              vowelSigns: {
-                a: '', aa: 'ാ', A: 'ാ', i: 'ി', ii: 'ീ', ee: 'ീ',
-                u: 'ു', uu: 'ൂ', oo: 'ൂ', e: 'െ', E: 'േ', ae: 'േ',
-                ai: 'ൈ', o: 'ൊ', O: 'ോ', oa: 'ോ', au: 'ൌ', ou: 'ൌ'
-              },
-              virama: '്',
-              cons: {
-                k: 'ക', kh: 'ഖ', g: 'ഗ', gh: 'ഘ', ng: 'ങ',
-                ch: 'ച', chh: 'ഛ', j: 'ജ', jh: 'ഝ', nj: 'ഞ',
-                t: 'ട', th: 'ത', d: 'ഡ', dh: 'ധ', N: 'ണ',
-                n: 'ന', p: 'പ', ph: 'ഫ', f: 'ഫ', b: 'ബ', bh: 'ഭ',
-                m: 'മ', y: 'യ', r: 'ര', l: 'ല', v: 'വ', w: 'വ',
-                sh: 'ശ', s: 'സ', h: 'ഹ', L: 'ള', zh: 'ഴ', R: 'റ'
-              }
-            }
-          },
-
-          transliterateWord(word, lang) {
-            const table = this.tables[lang];
-            if (!table) return word;
-            const w = word.toLowerCase();
-            let res = '', i = 0, len = w.length;
-
-            while (i < len) {
-              // Check consonant match (try 2-letter digraph first, then 1)
-              let c = null, clen = 0;
-              if (i + 2 <= len && table.cons[w.slice(i, i + 2)]) {
-                c = table.cons[w.slice(i, i + 2)];
-                clen = 2;
-              } else if (table.cons[w.slice(i, i + 1)]) {
-                c = table.cons[w.slice(i, i + 1)];
-                clen = 1;
-              }
-
-              if (c) {
-                i += clen;
-                // Check vowel sign
-                let v = null, vlen = 0;
-                if (i + 2 <= len && table.vowelSigns[w.slice(i, i + 2)] !== undefined) {
-                  v = table.vowelSigns[w.slice(i, i + 2)];
-                  vlen = 2;
-                } else if (i + 1 <= len && table.vowelSigns[w.slice(i, i + 1)] !== undefined) {
-                  v = table.vowelSigns[w.slice(i, i + 1)];
-                  vlen = 1;
-                }
-
-                if (v !== null) {
-                  res += c + v;
-                  i += vlen;
-                } else {
-                  // End of word or consonant cluster: append virama
-                  res += c + table.virama;
-                }
-              } else {
-                // Check independent vowel
-                let iv = null, ivlen = 0;
-                if (i + 2 <= len && table.vowels[w.slice(i, i + 2)]) {
-                  iv = table.vowels[w.slice(i, i + 2)];
-                  ivlen = 2;
-                } else if (table.vowels[w.slice(i, i + 1)]) {
-                  iv = table.vowels[w.slice(i, i + 1)];
-                  ivlen = 1;
-                }
-
-                if (iv) {
-                  res += iv;
-                  i += ivlen;
-                } else {
-                  res += w[i];
-                  i++;
-                }
-              }
-            }
-            return res;
-          },
-
-          transliterate(text, lang) {
-            if (!text || lang === 'en') return text;
-            const parts = text.split(/(\s+)/);
-            return parts.map(p => {
-              if (/^\s+$/.test(p)) return p;
-              return this.transliterateWord(p, lang);
-            }).join('');
-          }
         };
 
         const PRESETS = [
@@ -2251,12 +1324,7 @@
               flora: 'rose', // Roses default
               butterfly: 'mix', // Mix butterflies default
               butterflyCount: 3, // Butterfly swarm count (1 to 8)
-              targetLang: 'ta', // Default to Tamil
-              transMode: 'semantic', // 'semantic' | 'phonetic'
-              englishInput: 'in bloom',
-              translatedText: 'மலர்ந்துள்ளது',
-              romanizedText: 'malarndhulladhu',
-              text: 'மலர்ந்துள்ளது',
+              text: 'in bloom',
               seed: 7,
               status: '',
               busy: false,
@@ -2307,7 +1375,6 @@
             this.letters = [];
             this.uid = 1;
             this.cache = {};
-            this.transCache = new Map();
             this.Sd = 0;
             this.St = 0;
             this.wrapped = false;
@@ -2363,8 +1430,6 @@
             this.initStudioUI();
             this.initFloraFaunaDrawers();
             this.initTopBarAutoCollapse();
-            this.initSouthIndianLanguageSuite();
-            this.initDiffTabUI();
             this.resize();
 
             // Load Google Fonts
@@ -2394,861 +1459,7 @@
           }
 
           getFont() {
-            const base = FONTS[this.state.fontKey] || FONTS.cormorant;
-            const lang = this.state.targetLang || 'en';
-            const sLang = SOUTH_INDIAN_LANGS[lang];
-            if (sLang && sLang.font) {
-              return sLang.font;
-            }
-            return base;
-          }
-
-          // ---------- South Indian Language Translation & Transliteration Suite ----------
-          initSouthIndianLanguageSuite() {
-            const btnLang = document.getElementById('btn-lang-trigger');
-            const drawerContainer = document.getElementById('drawer-shelf-container');
-            const langDrawerContent = document.getElementById('lang-drawer-content');
-            const floraContent = document.getElementById('flora-drawer-content');
-            const faunaContent = document.getElementById('fauna-drawer-content');
-            const langCardsScroll = document.getElementById('lang-cards-scroll');
-
-            const btnModeSemantic = document.getElementById('btn-trans-mode-semantic');
-            const btnModePhonetic = document.getElementById('btn-trans-mode-phonetic');
-            const btnTransModeToggle = document.getElementById('btn-trans-mode-toggle');
-            const btnDrawerTransMode = document.getElementById('btn-drawer-trans-mode');
-            const hubInput = document.getElementById('trans-hub-input');
-            const btnSpeak = document.getElementById('btn-trans-speak');
-            const btnCopy = document.getElementById('btn-trans-copy');
-
-            // 1. Language Drawer Cards
-            if (langCardsScroll) {
-              this.renderLangDrawerCards();
-            }
-
-            // 2. Language Drawer Toggle
-            if (btnLang && drawerContainer && langDrawerContent) {
-              btnLang.onclick = (e) => {
-                e.stopPropagation();
-                const isOpen = drawerContainer.style.display === 'block' && langDrawerContent.style.display === 'flex';
-                if (isOpen) {
-                  drawerContainer.style.display = 'none';
-                  langDrawerContent.style.display = 'none';
-                  btnLang.style.borderColor = '#2B2B36';
-                } else {
-                  drawerContainer.style.display = 'block';
-                  langDrawerContent.style.display = 'flex';
-                  if (floraContent) floraContent.style.display = 'none';
-                  if (faunaContent) faunaContent.style.display = 'none';
-                  btnLang.style.borderColor = '#E63946';
-                }
-              };
-            }
-
-            // 3. Translation Mode Buttons
-            const setMode = (m) => this.setTranslationMode(m);
-            if (btnModeSemantic) btnModeSemantic.onclick = () => setMode('semantic');
-            if (btnModePhonetic) btnModePhonetic.onclick = () => setMode('phonetic');
-            if (btnTransModeToggle) btnTransModeToggle.onclick = () => setMode(this.state.transMode === 'semantic' ? 'phonetic' : 'semantic');
-            if (btnDrawerTransMode) btnDrawerTransMode.onclick = () => setMode(this.state.transMode === 'semantic' ? 'phonetic' : 'semantic');
-
-            // 4. Live Translation Hub Input Field
-            if (hubInput) {
-              hubInput.value = this.state.englishInput || 'in bloom';
-              hubInput.oninput = (e) => {
-                const val = e.target.value;
-                this.state.englishInput = val;
-                this.triggerLiveTranslation(val);
-              };
-              hubInput.onkeydown = (e) => {
-                e.stopPropagation();
-                if (e.key === 'Enter') {
-                  this.refocus();
-                }
-              };
-            }
-
-            // 5. Speech Audio Pronunciation
-            if (btnSpeak) {
-              btnSpeak.onclick = (e) => {
-                e.stopPropagation();
-                this.speakCurrentText();
-              };
-            }
-
-            // 6. Copy Button
-            if (btnCopy) {
-              btnCopy.onclick = (e) => {
-                e.stopPropagation();
-                const txt = (this.state.targetLang && this.state.targetLang !== 'en') ? this.state.translatedText : this.state.englishInput;
-                if (txt && navigator.clipboard) {
-                  navigator.clipboard.writeText(txt).then(() => {
-                    this.flashStatus(`Copied: "${txt}"`);
-                  });
-                }
-              };
-            }
-
-            // 7. Poster Sidebar Language Buttons
-            document.querySelectorAll('.poster-lang-btn').forEach(btn => {
-              btn.onclick = () => {
-                const lang = btn.dataset.lang;
-                this.setTargetLanguage(lang);
-              };
-            });
-            const posterModeBadge = document.getElementById('poster-lang-mode-badge');
-            if (posterModeBadge) {
-              posterModeBadge.onclick = () => {
-                this.setTranslationMode(this.state.transMode === 'semantic' ? 'phonetic' : 'semantic');
-              };
-            }
-
-            // 8. Translation Hub Language Quick Toggle Pills (Tamil, Telugu, Kannada, Malayalam)
-            document.querySelectorAll('.trans-hub-lang-pill').forEach(btn => {
-              btn.onclick = (e) => {
-                e.stopPropagation();
-                const lang = btn.dataset.lang;
-                this.setTargetLanguage(lang);
-              };
-            });
-
-            // 9. Quick button to open Diff Studio Tab
-            const btnOpenDiff = document.getElementById('btn-open-diff-tab');
-            if (btnOpenDiff) {
-              btnOpenDiff.onclick = (e) => {
-                e.stopPropagation();
-                this.setMode('langmodel');
-              };
-            }
-
-            // Render Prompt Seeds
-            this.renderPromptSeeds();
-
-            // Perform initial translation & canvas sync
-            this.triggerLiveTranslation(this.state.englishInput || 'in bloom');
-          }
-
-          setTargetLanguage(langId) {
-            if (!SOUTH_INDIAN_LANGS[langId]) langId = 'en';
-            this.state.targetLang = langId;
-            const lang = SOUTH_INDIAN_LANGS[langId];
-
-            // Update Top Bar Trigger text
-            const langTxt = document.getElementById('lang-trigger-text');
-            if (langTxt) langTxt.textContent = `Lang: ${lang.native}`;
-
-            // Update Hub Language Badge
-            const badge = document.getElementById('trans-hub-lang-badge');
-            if (badge) {
-              badge.textContent = lang.native;
-              badge.style.display = langId === 'en' ? 'none' : 'inline-block';
-            }
-
-            // Update Hub Language Quick Toggle Pills
-            document.querySelectorAll('.trans-hub-lang-pill').forEach(btn => {
-              const isAct = btn.dataset.lang === langId;
-              btn.classList.toggle('active', isAct);
-            });
-
-            // Clear font metrics cache
-            this.cache = {};
-
-            // Re-render prompt seeds for this language
-            this.renderPromptSeeds();
-            this.renderLangDrawerCards();
-            this.updatePosterLangUI();
-
-            // Re-run translation on current input
-            this.triggerLiveTranslation(this.state.englishInput || 'in bloom');
-
-            if (this.state.mode === 'poster') {
-              this.buildPoster();
-            } else if (this.state.mode === 'langmodel') {
-              this.renderDiffTab();
-            }
-            this.buildUI();
-            this.flashStatus(`Language: ${lang.native} (${lang.name})`);
-          }
-
-          setTranslationMode(mode) {
-            this.state.transMode = mode === 'phonetic' ? 'phonetic' : 'semantic';
-
-            const btnSem = document.getElementById('btn-trans-mode-semantic');
-            const btnPho = document.getElementById('btn-trans-mode-phonetic');
-            if (btnSem) btnSem.classList.toggle('active', this.state.transMode === 'semantic');
-            if (btnPho) btnPho.classList.toggle('active', this.state.transMode === 'phonetic');
-
-            const modeTxt = document.getElementById('trans-hub-mode-txt');
-            if (modeTxt) modeTxt.textContent = this.state.transMode === 'semantic' ? 'Semantic' : 'Phonetic';
-
-            const drawerModeTxt = document.getElementById('drawer-trans-mode-txt');
-            if (drawerModeTxt) drawerModeTxt.textContent = this.state.transMode === 'semantic' ? 'Semantic (Meaning)' : 'Phonetic (Sounds)';
-
-            const posterBadge = document.getElementById('poster-lang-mode-badge');
-            if (posterBadge) posterBadge.textContent = `${this.state.transMode === 'semantic' ? 'Semantic' : 'Phonetic'} ⇄`;
-
-            this.triggerLiveTranslation(this.state.englishInput || 'in bloom');
-            this.flashStatus(`Mode: ${this.state.transMode === 'semantic' ? 'Semantic Translation' : 'Phonetic Transliteration'}`);
-          }
-
-          renderPromptSeeds() {
-            const container = document.getElementById('trans-hub-seeds');
-            if (!container) return;
-            const lang = this.state.targetLang || 'ta';
-            const prompts = SOUTH_INDIAN_PROMPTS[lang] || SOUTH_INDIAN_PROMPTS.ta;
-
-            container.innerHTML = '';
-            prompts.forEach(p => {
-              const chip = document.createElement('button');
-              chip.className = 'btn-hover';
-              chip.style.cssText = `background:rgba(18,18,26,0.85);border:1px solid #2C2C3C;color:#E0E0EC;padding:3px 9px;border-radius:999px;font-size:10px;cursor:pointer;display:inline-flex;align-items:center;gap:4px;transition:all 0.15s ease;`;
-              chip.innerHTML = `<span>${p.icon}</span><span style="font-weight:600;">${p.native}</span><span style="font-size:8px;color:#858596;">(${p.en})</span>`;
-              chip.onclick = (e) => {
-                e.stopPropagation();
-                this.state.englishInput = p.en;
-                const hubInput = document.getElementById('trans-hub-input');
-                if (hubInput) hubInput.value = p.en;
-                if (this.posterTextInput) this.posterTextInput.value = p.en;
-                this.state.translatedText = p.native;
-                this.state.romanizedText = p.roman;
-                this.state.text = p.native;
-                this.updateLiveTranslationHub();
-                this.syncCanvasToNativeText(p.native);
-                if (this.state.mode === 'poster') this.buildPoster();
-                this.flashStatus(`Bloomed: ${p.native} (${p.en})`);
-              };
-              container.appendChild(chip);
-            });
-          }
-
-          renderLangDrawerCards() {
-            const langCardsScroll = document.getElementById('lang-cards-scroll');
-            if (!langCardsScroll) return;
-            langCardsScroll.innerHTML = '';
-            Object.values(SOUTH_INDIAN_LANGS).forEach(lang => {
-              const card = document.createElement('div');
-              const active = this.state.targetLang === lang.id;
-              card.className = 'preset-chip';
-              card.style.cssText = `min-width:130px;padding:8px 10px;cursor:pointer;background:${active ? '#1A1015' : '#101014'};border:1px solid ${active ? '#9E1624' : '#282838'};border-radius:6px;display:flex;flex-direction:column;gap:3px;transition:all 0.15s ease;`;
-              card.innerHTML = `
-                <div style="display:flex;align-items:center;justify-content:space-between;">
-                  <span style="font-weight:700;font-size:12px;color:#FFFFFF;display:flex;align-items:center;gap:5px;">
-                    <span>${lang.flag}</span>
-                    <span>${lang.native}</span>
-                  </span>
-                  ${active ? '<span style="color:#E63946;font-size:10px;">●</span>' : ''}
-                </div>
-                <span style="font-size:10px;color:#B5B5C8;letter-spacing:0.02em;">${lang.name}</span>
-                <span style="font-size:9px;color:#787885;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">${lang.sub}</span>
-              `;
-              card.onclick = (e) => {
-                e.stopPropagation();
-                this.setTargetLanguage(lang.id);
-                const drawerContainer = document.getElementById('drawer-shelf-container');
-                if (drawerContainer) drawerContainer.style.display = 'none';
-                const btnLang = document.getElementById('btn-lang-trigger');
-                if (btnLang) btnLang.style.borderColor = '#2B2B36';
-              };
-              langCardsScroll.appendChild(card);
-            });
-          }
-
-          updatePosterLangUI() {
-            const current = this.state.targetLang || 'ta';
-            document.querySelectorAll('.poster-lang-btn').forEach(btn => {
-              const active = btn.dataset.lang === current;
-              btn.classList.toggle('active', active);
-              btn.style.background = active ? '#181014' : '#101014';
-              btn.style.borderColor = active ? '#9E1624' : '#2B2B38';
-              btn.style.color = active ? '#FFFFFF' : '#B5B5C8';
-            });
-            const badge = document.getElementById('poster-lang-mode-badge');
-            if (badge) {
-              badge.textContent = `${this.state.transMode === 'semantic' ? 'Semantic' : 'Phonetic'} ⇄`;
-            }
-          }
-
-          // ---------- South Indian Language Model Diff Studio Implementation ----------
-          initDiffTabUI() {
-            const diffClose = document.getElementById('diff-close-dot');
-            if (diffClose) diffClose.onclick = () => this.setMode('type');
-
-            const diffInput = document.getElementById('diff-source-input');
-            const clearBtn = document.getElementById('btn-diff-clear-input');
-            if (diffInput) {
-              diffInput.value = this.state.englishInput || 'in bloom';
-              diffInput.oninput = (e) => {
-                const val = e.target.value;
-                this.state.englishInput = val;
-                const hubInp = document.getElementById('trans-hub-input');
-                if (hubInp) hubInp.value = val;
-                this.triggerLiveTranslation(val);
-                this.renderDiffTab();
-              };
-            }
-            if (clearBtn && diffInput) {
-              clearBtn.onclick = () => {
-                diffInput.value = '';
-                this.state.englishInput = '';
-                const hubInp = document.getElementById('trans-hub-input');
-                if (hubInp) hubInp.value = '';
-                this.triggerLiveTranslation('');
-                this.renderDiffTab();
-                diffInput.focus();
-              };
-            }
-
-            const btnSem = document.getElementById('btn-diff-mode-sem');
-            const btnPho = document.getElementById('btn-diff-mode-pho');
-            if (btnSem) {
-              btnSem.onclick = () => {
-                this.setTranslationMode('semantic');
-                this.renderDiffTab();
-              };
-            }
-            if (btnPho) {
-              btnPho.onclick = () => {
-                this.setTranslationMode('phonetic');
-                this.renderDiffTab();
-              };
-            }
-
-            const btnJumpGarden = document.getElementById('btn-diff-jump-garden');
-            if (btnJumpGarden) {
-              btnJumpGarden.onclick = () => this.setMode('type');
-            }
-
-            // Quick Prompt Chips in Diff Studio
-            this.renderDiffPromptChips();
-          }
-
-          renderDiffPromptChips() {
-            const container = document.getElementById('diff-prompt-chips-row');
-            if (!container) return;
-            const prompts = [
-              { label: 'in bloom', icon: '🌺' },
-              { label: 'sweet breeze', icon: '🍃' },
-              { label: 'morning sun', icon: '☀️' },
-              { label: 'divine lotus', icon: '🪷' },
-              { label: 'peace', icon: '🕊️' },
-              { label: 'rose garden', icon: '🌹' },
-              { label: 'butterflies', icon: '🦋' },
-              { label: 'vanakkam', icon: '🙏' },
-              { label: 'namaskaram', icon: '✨' },
-              { label: 'soul and bliss', icon: '💫' }
-            ];
-            container.innerHTML = '';
-            prompts.forEach(p => {
-              const chip = document.createElement('button');
-              chip.className = 'sub-tab';
-              chip.style.cssText = 'background:#13131D;border:1px solid #252536;color:#D8D8E6;font-size:10px;padding:3px 9px;border-radius:14px;cursor:pointer;display:inline-flex;align-items:center;gap:4px;';
-              chip.innerHTML = `<span>${p.icon}</span> <span>${p.label}</span>`;
-              chip.onclick = () => {
-                const diffInput = document.getElementById('diff-source-input');
-                if (diffInput) diffInput.value = p.label;
-                this.state.englishInput = p.label;
-                const hubInp = document.getElementById('trans-hub-input');
-                if (hubInp) hubInp.value = p.label;
-                this.triggerLiveTranslation(p.label);
-                this.renderDiffTab();
-              };
-              container.appendChild(chip);
-            });
-          }
-
-          speakText(text, langKey) {
-            if (!('speechSynthesis' in window)) {
-              this.flashStatus('Audio synthesis not supported in this browser');
-              return;
-            }
-            window.speechSynthesis.cancel();
-            const u = new SpeechSynthesisUtterance(text || '');
-            const lang = SOUTH_INDIAN_LANGS[langKey || 'ta'] || SOUTH_INDIAN_LANGS.ta;
-            u.lang = lang.voice || 'en-US';
-            u.rate = 0.88;
-            window.speechSynthesis.speak(u);
-            this.flashStatus(`🔊 Speaking ${lang.native}: "${text}"`);
-          }
-
-          renderDiffTab() {
-            const raw = (this.state.englishInput || 'in bloom').trim();
-            const lower = raw.toLowerCase();
-            const isPhonetic = this.state.transMode === 'phonetic';
-
-            // Sync input box if needed
-            const diffInput = document.getElementById('diff-source-input');
-            if (diffInput && diffInput.value !== (this.state.englishInput || 'in bloom')) {
-              diffInput.value = this.state.englishInput || 'in bloom';
-            }
-
-            // Update stats
-            const statsEl = document.getElementById('diff-input-stats');
-            if (statsEl) {
-              const words = raw ? raw.split(/\s+/).length : 0;
-              statsEl.textContent = `(${raw.length} chars · ${words} words)`;
-            }
-
-            // Update Mode buttons in diff tab
-            const btnSem = document.getElementById('btn-diff-mode-sem');
-            const btnPho = document.getElementById('btn-diff-mode-pho');
-            if (btnSem) btnSem.classList.toggle('active', !isPhonetic);
-            if (btnPho) btnPho.classList.toggle('active', isPhonetic);
-
-            const grid = document.getElementById('diff-cards-grid');
-            const tbody = document.getElementById('diff-alignment-tbody');
-            if (!grid) return;
-
-            grid.innerHTML = '';
-            if (tbody) tbody.innerHTML = '';
-
-            const langKeys = ['ta', 'te', 'kn', 'ml'];
-            const langFlowers = {
-              ta: { flower: 'செங்காந்தள் (Flame Lily)', icon: '🌸', color: '#FF4D6D' },
-              te: { flower: 'మల్లెపువ్వు (Jasmine)', icon: '🌺', color: '#FF758F' },
-              kn: { flower: 'ಕಮಲ (Sacred Lotus)', icon: '🌼', color: '#FFB703' },
-              ml: { flower: 'കണിക്കൊന്ന (Golden Shower)', icon: '🏵️', color: '#06D6A0' }
-            };
-
-            const fontFamilies = {
-              ta: "'Noto Serif Tamil', serif",
-              te: "'Noto Serif Telugu', serif",
-              kn: "'Noto Serif Kannada', serif",
-              ml: "'Noto Serif Malayalam', serif"
-            };
-
-            langKeys.forEach(langKey => {
-              const langInfo = SOUTH_INDIAN_LANGS[langKey];
-              let transText = '';
-              let romanized = raw;
-
-              if (!isPhonetic && SOUTH_INDIAN_DICT[lower] && SOUTH_INDIAN_DICT[lower][langKey]) {
-                transText = SOUTH_INDIAN_DICT[lower][langKey].translatedText;
-                romanized = SOUTH_INDIAN_DICT[lower][langKey].romanized;
-              } else {
-                const words = lower.split(/\s+/);
-                const mapped = words.map(w => {
-                  if (!isPhonetic && SOUTH_INDIAN_DICT[w] && SOUTH_INDIAN_DICT[w][langKey]) {
-                    return SOUTH_INDIAN_DICT[w][langKey].translatedText;
-                  }
-                  return IndicTransliterator.transliterate(w, langKey);
-                });
-                transText = mapped.join(' ');
-              }
-
-              const graphemes = cleanGraphemes(transText);
-              const isActive = this.state.targetLang === langKey;
-              const flowerInfo = langFlowers[langKey] || { flower: 'Flora', icon: '🌿', color: '#E63946' };
-
-              // Build Diff Card
-              const card = document.createElement('div');
-              card.className = `diff-card-item ${isActive ? 'active-lang' : ''}`;
-              card.id = `diff-card-${langKey}`;
-
-              // Header
-              const header = document.createElement('div');
-              header.style.cssText = 'display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #1E1E2C;padding-bottom:10px;';
-              header.innerHTML = `
-                <div style="display:flex;align-items:center;gap:8px;">
-                  <span style="font-size:18px;">${langInfo.flag}</span>
-                  <div>
-                    <div style="font-weight:700;font-size:14px;color:#FFF;display:flex;align-items:center;gap:6px;">
-                      <span>${langInfo.native}</span>
-                      <span style="font-size:11px;color:#8E8E9F;font-weight:400;">(${langInfo.name})</span>
-                    </div>
-                    <div style="font-size:9px;color:${flowerInfo.color};display:flex;align-items:center;gap:4px;margin-top:1px;">
-                      <span>${flowerInfo.icon}</span>
-                      <span>${flowerInfo.flower}</span>
-                    </div>
-                  </div>
-                </div>
-                ${isActive ? '<span style="font-size:9px;background:#E63946;color:#FFF;padding:2px 7px;border-radius:10px;font-weight:700;letter-spacing:0.04em;">ACTIVE</span>' : ''}
-              `;
-              card.appendChild(header);
-
-              // Rendered Script Typography Box
-              const scriptBox = document.createElement('div');
-              scriptBox.style.cssText = 'background:#08080E;border:1px solid #242436;border-radius:8px;padding:14px;display:flex;flex-direction:column;gap:6px;min-height:85px;justify-content:center;position:relative;overflow:hidden;';
-              scriptBox.innerHTML = `
-                <div style="font-family:${fontFamilies[langKey]};font-size:24px;font-weight:700;color:#FFFFFF;letter-spacing:0.02em;line-height:1.3;word-break:break-word;">
-                  ${transText || '—'}
-                </div>
-                <div style="font-size:11px;color:#9E9EB2;font-style:italic;font-family:'DM Mono',monospace;">
-                  (${romanized || raw})
-                </div>
-              `;
-              card.appendChild(scriptBox);
-
-              // Grapheme Diff Tokens Section
-              const graphemeSection = document.createElement('div');
-              graphemeSection.style.cssText = 'display:flex;flex-direction:column;gap:6px;';
-              graphemeSection.innerHTML = `
-                <div style="display:flex;align-items:center;justify-content:space-between;font-size:10px;color:#78788A;font-family:'DM Mono',monospace;">
-                  <span>SYLLABIC GRAPHEMES:</span>
-                  <span>${graphemes.length} clusters</span>
-                </div>
-                <div style="display:flex;gap:4px;flex-wrap:wrap;max-height:80px;overflow-y:auto;padding:2px 0;">
-                  ${graphemes.map(g => `<span class="diff-grapheme-chip" style="font-family:${fontFamilies[langKey]};" title="Syllabic unit: ${g}">${g}</span>`).join('')}
-                </div>
-              `;
-              card.appendChild(graphemeSection);
-
-              // Action Buttons
-              const actions = document.createElement('div');
-              actions.style.cssText = 'display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin-top:auto;padding-top:8px;border-top:1px solid #1A1A24;';
-              actions.innerHTML = `
-                <button class="diff-action-btn btn-speak" title="Listen to pronunciation">🔊 Speak</button>
-                <button class="diff-action-btn btn-copy" title="Copy script">📋 Copy</button>
-                <button class="diff-action-btn bloom-btn btn-bloom" style="margin-left:auto;" title="Sprout botanical flora on this script in Garden">🌿 Bloom in Garden</button>
-              `;
-
-              actions.querySelector('.btn-speak').onclick = () => {
-                this.speakText(transText, langKey);
-              };
-              actions.querySelector('.btn-copy').onclick = () => {
-                if (navigator.clipboard) {
-                  navigator.clipboard.writeText(transText).then(() => {
-                    this.flashStatus(`Copied: "${transText}"`);
-                  });
-                }
-              };
-              actions.querySelector('.btn-bloom').onclick = () => {
-                this.setTargetLanguage(langKey);
-                this.setMode('type');
-              };
-
-              card.appendChild(actions);
-              grid.appendChild(card);
-
-              // Populate Comparative Table row
-              if (tbody) {
-                const tr = document.createElement('tr');
-                tr.style.cssText = `border-bottom:1px solid #1C1C26;${isActive ? 'background:rgba(230,57,70,0.08);' : ''}`;
-                tr.innerHTML = `
-                  <td style="padding:8px;font-weight:600;color:${isActive ? '#E63946' : '#FFFFFF'};">
-                    ${langInfo.flag} ${langInfo.native}
-                  </td>
-                  <td style="padding:8px;font-family:${fontFamilies[langKey]};font-size:14px;color:#FFF;font-weight:700;">
-                    ${transText}
-                  </td>
-                  <td style="padding:8px;font-family:'DM Mono',monospace;color:#9E9EB5;font-size:11px;">
-                    ${graphemes.length} syllables
-                  </td>
-                  <td style="padding:8px;font-family:'DM Mono',monospace;color:#78788E;font-size:11px;font-style:italic;">
-                    ${romanized}
-                  </td>
-                `;
-                tbody.appendChild(tr);
-              }
-            });
-
-            // Update mini-canvas label and draw flora preview
-            const scriptLabel = document.getElementById('diff-active-script-label');
-            const activeLang = SOUTH_INDIAN_LANGS[this.state.targetLang || 'ta'] || SOUTH_INDIAN_LANGS.ta;
-            if (scriptLabel) {
-              scriptLabel.textContent = `${activeLang.name} (${activeLang.native})`;
-            }
-
-            this.drawDiffMiniCanvas();
-          }
-
-          drawDiffMiniCanvas() {
-            const canvas = document.getElementById('diff-canvas');
-            if (!canvas) return;
-            const ctx = canvas.getContext('2d');
-            if (!ctx) return;
-
-            const w = canvas.width;
-            const h = canvas.height;
-
-            // Clear
-            ctx.fillStyle = '#060609';
-            ctx.fillRect(0, 0, w, h);
-
-            // Subtle vignette & radial glow
-            const rad = ctx.createRadialGradient(w / 2, h / 2, 10, w / 2, h / 2, w / 1.5);
-            rad.addColorStop(0, 'rgba(230, 57, 70, 0.12)');
-            rad.addColorStop(1, 'rgba(6, 6, 9, 0)');
-            ctx.fillStyle = rad;
-            ctx.fillRect(0, 0, w, h);
-
-            // Active text
-            const lang = this.state.targetLang || 'ta';
-            const text = this.state.translatedText || 'மலர்ந்துள்ளது';
-
-            const fontFam = {
-              ta: "'Noto Serif Tamil', serif",
-              te: "'Noto Serif Telugu', serif",
-              kn: "'Noto Serif Kannada', serif",
-              ml: "'Noto Serif Malayalam', serif"
-            }[lang] || "'Noto Serif Tamil', serif";
-
-            ctx.save();
-            ctx.textAlign = 'center';
-            ctx.textBaseline = 'middle';
-            ctx.font = `bold 38px ${fontFam}`;
-            ctx.fillStyle = '#FFFFFF';
-            ctx.shadowColor = 'rgba(230, 57, 70, 0.5)';
-            ctx.shadowBlur = 12;
-            ctx.fillText(text, w / 2, h / 2 - 10);
-            ctx.restore();
-
-            // Romanization subtitle
-            ctx.save();
-            ctx.textAlign = 'center';
-            ctx.textBaseline = 'middle';
-            ctx.font = `italic 14px 'DM Mono', monospace`;
-            ctx.fillStyle = '#8E8E9F';
-            ctx.fillText(`(${this.state.romanizedText || 'in bloom'})`, w / 2, h / 2 + 35);
-            ctx.restore();
-
-            // Draw botanical decorative vines & blossoms around text
-            ctx.save();
-            ctx.strokeStyle = '#2A9D8F';
-            ctx.lineWidth = 2;
-            ctx.beginPath();
-            ctx.moveTo(w / 2 - 120, h / 2 + 55);
-            ctx.bezierCurveTo(w / 2 - 60, h / 2 + 70, w / 2 + 60, h / 2 + 40, w / 2 + 120, h / 2 + 55);
-            ctx.stroke();
-
-            // Rose petals & blossoms
-            const petals = [
-              { x: w / 2 - 130, y: h / 2 - 25, r: 12, col: '#E63946' },
-              { x: w / 2 - 118, y: h / 2 - 35, r: 8, col: '#FF758F' },
-              { x: w / 2 + 130, y: h / 2 - 25, r: 12, col: '#E63946' },
-              { x: w / 2 + 118, y: h / 2 - 35, r: 8, col: '#FF758F' },
-              { x: w / 2, y: h / 2 + 65, r: 7, col: '#FFB703' }
-            ];
-            petals.forEach(p => {
-              ctx.beginPath();
-              ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-              ctx.fillStyle = p.col;
-              ctx.shadowColor = p.col;
-              ctx.shadowBlur = 8;
-              ctx.fill();
-            });
-
-            // Fluttering Butterfly decoration
-            ctx.fillStyle = '#00F5D4';
-            ctx.beginPath();
-            ctx.ellipse(w / 2 + 140, h / 2 - 45, 10, 6, -0.4, 0, Math.PI * 2);
-            ctx.fill();
-            ctx.fillStyle = '#48CAE4';
-            ctx.beginPath();
-            ctx.ellipse(w / 2 + 152, h / 2 - 48, 8, 5, 0.4, 0, Math.PI * 2);
-            ctx.fill();
-
-            ctx.restore();
-          }
-
-          triggerLiveTranslation(englishText) {
-            const raw = (englishText || '').trim();
-            const lang = this.state.targetLang || 'ta';
-            const isPhonetic = this.state.transMode === 'phonetic';
-
-            if (!raw) {
-              this.state.translatedText = '';
-              this.state.romanizedText = '';
-              this.state.text = '';
-              this.updateLiveTranslationHub();
-              this.syncCanvasToNativeText('');
-              if (this.state.mode === 'poster') this.buildPoster();
-              return;
-            }
-
-            if (lang === 'en') {
-              this.state.translatedText = raw;
-              this.state.romanizedText = raw;
-              this.state.text = raw;
-              this.updateLiveTranslationHub();
-              this.syncCanvasToNativeText(raw);
-              if (this.state.mode === 'poster') this.buildPoster();
-              return;
-            }
-
-            const lower = raw.toLowerCase();
-            const cacheKey = `${lang}_${isPhonetic ? 'p' : 's'}_${lower}`;
-
-            // Check cache
-            if (this.transCache && this.transCache.has(cacheKey)) {
-              const cached = this.transCache.get(cacheKey);
-              this.state.translatedText = cached.translatedText;
-              this.state.romanizedText = cached.romanized;
-              this.state.text = cached.translatedText;
-              this.updateLiveTranslationHub();
-              this.syncCanvasToNativeText(cached.translatedText);
-              if (this.state.mode === 'poster') this.buildPoster();
-              return;
-            }
-
-            // Step 1: Instant zero-latency translation & transliteration
-            let instantTranslated = '';
-            let instantRomanized = raw;
-
-            if (!isPhonetic && SOUTH_INDIAN_DICT[lower] && SOUTH_INDIAN_DICT[lower][lang]) {
-              instantTranslated = SOUTH_INDIAN_DICT[lower][lang].translatedText;
-              instantRomanized = SOUTH_INDIAN_DICT[lower][lang].romanized;
-            } else {
-              const words = lower.split(/\s+/);
-              const mappedWords = words.map(w => {
-                if (!isPhonetic && SOUTH_INDIAN_DICT[w] && SOUTH_INDIAN_DICT[w][lang]) {
-                  return SOUTH_INDIAN_DICT[w][lang].translatedText;
-                }
-                return IndicTransliterator.transliterate(w, lang);
-              });
-              instantTranslated = mappedWords.join(' ');
-            }
-
-            this.state.translatedText = instantTranslated;
-            this.state.romanizedText = instantRomanized;
-            this.state.text = instantTranslated;
-            this.updateLiveTranslationHub();
-            this.syncCanvasToNativeText(instantTranslated);
-            if (this.state.mode === 'poster') this.buildPoster();
-
-            // Cache direct dictionary hit immediately to avoid unnecessary network requests
-            if (!isPhonetic && SOUTH_INDIAN_DICT[lower] && SOUTH_INDIAN_DICT[lower][lang]) {
-              this.transCache.set(cacheKey, {
-                translatedText: instantTranslated,
-                romanized: instantRomanized,
-                targetLang: lang,
-                mode: 'semantic'
-              });
-              return;
-            }
-
-            // Step 2: Query full-stack /api/translate for compound phrases
-            clearTimeout(this._transDebounceTimer);
-            this._transDebounceTimer = setTimeout(async () => {
-              try {
-                const res = await fetch('/api/translate', {
-                  method: 'POST',
-                  headers: { 'Content-Type': 'application/json' },
-                  body: JSON.stringify({
-                    text: raw,
-                    targetLang: lang,
-                    mode: isPhonetic ? 'phonetic' : 'semantic'
-                  })
-                });
-                if (res.ok) {
-                  const data = await res.json();
-                  if (data && data.translatedText) {
-                    this.transCache.set(cacheKey, data);
-                    if ((this.state.englishInput || '').trim() === raw && this.state.targetLang === lang) {
-                      this.state.translatedText = data.translatedText;
-                      this.state.romanizedText = data.romanized || instantRomanized;
-                      this.state.text = data.translatedText;
-                      this.updateLiveTranslationHub();
-                      this.syncCanvasToNativeText(data.translatedText);
-                      if (this.state.mode === 'poster') this.buildPoster();
-                    }
-                  }
-                }
-              } catch (err) {}
-            }, 450);
-          }
-
-          updateLiveTranslationHub() {
-            const nativeEl = document.getElementById('trans-hub-native-text');
-            const romanEl = document.getElementById('trans-hub-romanized');
-            const langBadge = document.getElementById('trans-hub-lang-badge');
-            const arrow = document.getElementById('trans-hub-flow-arrow');
-            const posterScript = document.getElementById('poster-trans-script-display');
-            const posterPronounce = document.getElementById('poster-trans-pronounce');
-
-            const lang = SOUTH_INDIAN_LANGS[this.state.targetLang || 'ta'] || SOUTH_INDIAN_LANGS.ta;
-
-            if (langBadge) {
-              langBadge.textContent = lang.native;
-              langBadge.style.display = this.state.targetLang === 'en' ? 'none' : 'inline-block';
-            }
-            if (arrow) {
-              arrow.style.transform = 'scale(1.25)';
-              setTimeout(() => { if (arrow) arrow.style.transform = 'scale(1)'; }, 180);
-            }
-            if (nativeEl) {
-              nativeEl.textContent = this.state.translatedText || (this.state.englishInput || '...');
-              const sFont = lang.font || FONTS[this.state.fontKey] || FONTS.cormorant;
-              nativeEl.style.fontFamily = sFont.css;
-            }
-            if (romanEl) {
-              if (this.state.targetLang === 'en' || !this.state.romanizedText) {
-                romanEl.textContent = '';
-                romanEl.style.display = 'none';
-              } else {
-                romanEl.textContent = `(${this.state.romanizedText})`;
-                romanEl.style.display = 'inline-block';
-              }
-            }
-            if (posterScript) {
-              posterScript.textContent = this.state.translatedText || (this.state.englishInput || 'in bloom');
-            }
-            if (posterPronounce) {
-              posterPronounce.textContent = (this.state.targetLang === 'en' || !this.state.romanizedText) ? '' : `(${this.state.romanizedText})`;
-            }
-          }
-
-          speakCurrentText() {
-            if (!('speechSynthesis' in window)) {
-              this.flashStatus('Audio synthesis not supported in this browser');
-              return;
-            }
-            window.speechSynthesis.cancel();
-            const textToSpeak = (this.state.targetLang && this.state.targetLang !== 'en') ? this.state.translatedText : this.state.englishInput;
-            if (!textToSpeak) return;
-
-            const u = new SpeechSynthesisUtterance(textToSpeak);
-            const lang = SOUTH_INDIAN_LANGS[this.state.targetLang || 'ta'] || SOUTH_INDIAN_LANGS.ta;
-            u.lang = lang.voice || 'en-US';
-            u.rate = 0.88;
-            window.speechSynthesis.speak(u);
-            this.flashStatus(`🔊 Speaking: "${textToSpeak}"`);
-          }
-
-          syncCanvasToNativeText(nativeText) {
-            const graphemes = cleanGraphemes(nativeText || '');
-            const now = performance.now();
-            const alive = this.letters.filter(l => !l.dead);
-
-            let p = 0;
-            while (p < alive.length && p < graphemes.length && alive[p].ch === graphemes[p]) {
-              p++;
-            }
-
-            for (let i = p; i < alive.length; i++) {
-              alive[i].dead = now;
-            }
-
-            let last = p > 0 ? alive[p - 1] : null;
-            for (let i = p; i < graphemes.length; i++) {
-              const ch = graphemes[i];
-              if (ch === ' ') {
-                if (last && last.ch !== ' ') {
-                  last.cut = now;
-                  this.genEnd(last, now - last.birth);
-                }
-                const sp = { ch: ' ', id: this.uid++, birth: now, els: [] };
-                this.letters.push(sp);
-                last = sp;
-              } else {
-                const same = last && last.ch !== ' ';
-                const l = {
-                  ch,
-                  id: this.uid++,
-                  birth: now,
-                  tb: now,
-                  ws: same ? last.ws : Math.floor(this.rand() * 1e9),
-                  wi: same ? last.wi + 1 : 0,
-                  prev: same ? last : null
-                };
-                this.gen(l);
-                this.letters.push(l);
-                last = l;
-              }
-            }
-
-            this.layout();
-            if (!this.hasTypedText()) {
-              this.flyAwayAll();
-            }
+            return FONTS[this.state.fontKey] || FONTS.cormorant;
           }
 
           buildUI() {
@@ -3262,30 +1473,6 @@
             const btnPoster = document.getElementById('btn-mode-poster');
             if (btnType) btnType.onclick = () => this.setMode('type');
             if (btnPoster) btnPoster.onclick = () => this.setMode('poster');
-
-            // Main Top Bar Navigation Tabs
-            const btnTabType = document.getElementById('btn-tab-type');
-            const btnTabPoster = document.getElementById('btn-tab-poster');
-            const btnTabLangModel = document.getElementById('btn-tab-langmodel');
-            if (btnTabType) btnTabType.onclick = () => this.setMode('type');
-            if (btnTabPoster) btnTabPoster.onclick = () => this.setMode('poster');
-            if (btnTabLangModel) btnTabLangModel.onclick = () => this.setMode('langmodel');
-
-            // Poster Studio Navigation Tabs
-            const btnStudioTabType = document.getElementById('btn-studio-tab-type');
-            const btnStudioTabPoster = document.getElementById('btn-studio-tab-poster');
-            const btnStudioTabLangModel = document.getElementById('btn-studio-tab-langmodel');
-            if (btnStudioTabType) btnStudioTabType.onclick = () => this.setMode('type');
-            if (btnStudioTabPoster) btnStudioTabPoster.onclick = () => this.setMode('poster');
-            if (btnStudioTabLangModel) btnStudioTabLangModel.onclick = () => this.setMode('langmodel');
-
-            // Diff Studio Navigation Tabs
-            const btnDiffTabType = document.getElementById('btn-diff-tab-type');
-            const btnDiffTabPoster = document.getElementById('btn-diff-tab-poster');
-            const btnDiffTabLangModel = document.getElementById('btn-diff-tab-langmodel');
-            if (btnDiffTabType) btnDiffTabType.onclick = () => this.setMode('type');
-            if (btnDiffTabPoster) btnDiffTabPoster.onclick = () => this.setMode('poster');
-            if (btnDiffTabLangModel) btnDiffTabLangModel.onclick = () => this.setMode('langmodel');
 
             // Curated 1-Click Gothic Preset Chips
             document.querySelectorAll('#simple-presets-chips .preset-chip').forEach(btn => {
@@ -3376,19 +1563,11 @@
             };
 
             // Poster Word input & reshuffle
-            this.posterTextInput.value = (this.state.targetLang && this.state.targetLang !== 'en') ? (this.state.englishInput || '') : this.state.text;
+            this.posterTextInput.value = this.state.text;
             this.posterTextInput.style.fontFamily = this.getFont().css;
             this.posterTextInput.oninput = (e) => {
-              const val = e.target.value;
-              this.state.englishInput = val;
-              const hubInp = document.getElementById('trans-hub-input');
-              if (hubInp) hubInp.value = val;
-              if (this.state.targetLang && this.state.targetLang !== 'en') {
-                this.triggerLiveTranslation(val);
-              } else {
-                this.state.text = val;
-                this.buildPoster();
-              }
+              this.state.text = e.target.value;
+              this.buildPoster();
             };
             const btnResh = document.getElementById('btn-reshuffle');
             if (btnResh) {
@@ -3539,46 +1718,10 @@
             this.palContainer.style.background = pc.bg;
 
             const isType = this.state.mode === 'type';
-            const isPoster = this.state.mode === 'poster';
-            const isLangModel = this.state.mode === 'langmodel';
-
             this.cv.style.display = isType ? 'block' : 'none';
             this.peersEl.style.display = isType ? 'block' : 'none';
             this.barEl.style.display = isType ? 'flex' : 'none';
-            this.posterEl.style.display = isPoster ? 'flex' : 'none';
-
-            const diffTabEl = document.getElementById('langmodel-diff-tab');
-            if (diffTabEl) diffTabEl.style.display = isLangModel ? 'flex' : 'none';
-
-            const transHub = document.getElementById('tg-live-trans-hub');
-            if (transHub) transHub.style.display = isType ? 'flex' : 'none';
-
-            const topBar = document.getElementById('tg-top-bar');
-            if (topBar) topBar.style.display = isType ? 'block' : 'none';
-
-            // Main view tabs
-            const btnTabType = document.getElementById('btn-tab-type');
-            const btnTabPoster = document.getElementById('btn-tab-poster');
-            const btnTabLangModel = document.getElementById('btn-tab-langmodel');
-            if (btnTabType) btnTabType.classList.toggle('active', isType);
-            if (btnTabPoster) btnTabPoster.classList.toggle('active', isPoster);
-            if (btnTabLangModel) btnTabLangModel.classList.toggle('active', isLangModel);
-
-            // Studio header tabs
-            const btnStudioType = document.getElementById('btn-studio-tab-type');
-            const btnStudioPoster = document.getElementById('btn-studio-tab-poster');
-            const btnStudioLangModel = document.getElementById('btn-studio-tab-langmodel');
-            if (btnStudioType) btnStudioType.classList.toggle('active', isType);
-            if (btnStudioPoster) btnStudioPoster.classList.toggle('active', isPoster);
-            if (btnStudioLangModel) btnStudioLangModel.classList.toggle('active', isLangModel);
-
-            // Diff Studio header tabs
-            const btnDiffType = document.getElementById('btn-diff-tab-type');
-            const btnDiffPoster = document.getElementById('btn-diff-tab-poster');
-            const btnDiffLangModel = document.getElementById('btn-diff-tab-langmodel');
-            if (btnDiffType) btnDiffType.classList.toggle('active', isType);
-            if (btnDiffPoster) btnDiffPoster.classList.toggle('active', isPoster);
-            if (btnDiffLangModel) btnDiffLangModel.classList.toggle('active', isLangModel);
+            this.posterEl.style.display = isType ? 'none' : 'flex';
 
             const btnType = document.getElementById('btn-mode-type');
             const btnPoster = document.getElementById('btn-mode-poster');
@@ -3587,8 +1730,8 @@
               btnType.style.color = isType ? '#000000' : '#BDBDBD';
             }
             if (btnPoster) {
-              btnPoster.style.background = isPoster ? '#FFFFFF' : 'transparent';
-              btnPoster.style.color = isPoster ? '#000000' : '#BDBDBD';
+              btnPoster.style.background = !isType ? '#FFFFFF' : 'transparent';
+              btnPoster.style.color = !isType ? '#000000' : '#BDBDBD';
             }
 
             const pr = this.preset();
@@ -3606,14 +1749,8 @@
             if (m === this.state.mode) return;
             this.state.mode = m;
             if (m === 'poster') {
-              if (this.state.targetLang && this.state.targetLang !== 'en') {
-                this.state.text = this.state.translatedText || 'மலர்ந்துள்ளது';
-                this.posterTextInput.value = this.state.englishInput || 'in bloom';
-              } else {
-                this.state.text = this.liveText() || this.state.text;
-                this.posterTextInput.value = this.state.text;
-              }
-              this.updatePosterLangUI();
+              this.state.text = this.liveText() || this.state.text;
+              this.posterTextInput.value = this.state.text;
               this.buildPoster();
               this.initOrnateSliders();
               if (!this.state.customPaletteActive) {
@@ -3628,8 +1765,6 @@
               if (this.setPosterSubMode) {
                 this.setPosterSubMode(this.state.posterSubMode || 'simple');
               }
-            } else if (m === 'langmodel') {
-              this.renderDiffTab();
             } else {
               if (this.revealTopBar) {
                 this.revealTopBar();
@@ -3639,7 +1774,6 @@
               this.resize();
               this.refocus();
             }
-            this.updateAppearance();
             this.buildUI();
           }
 
@@ -3675,16 +1809,8 @@
             // Quick text input & re-seed
             if (this.posterTextInput) {
               this.posterTextInput.oninput = () => {
-                const val = this.posterTextInput.value;
-                this.state.englishInput = val;
-                const hubInp = document.getElementById('trans-hub-input');
-                if (hubInp) hubInp.value = val;
-                if (this.state.targetLang && this.state.targetLang !== 'en') {
-                  this.triggerLiveTranslation(val);
-                } else {
-                  this.state.text = val;
-                  this.buildPoster();
-                }
+                this.state.text = this.posterTextInput.value;
+                this.buildPoster();
               };
             }
             const btnReshuffle = document.getElementById('btn-reshuffle');
@@ -6231,24 +4357,6 @@
             if (p === 0 && old[0] === S && old.length > 1) dels -= 1;
             const now = performance.now();
             this.lastKey = now;
-
-            if (this.state.targetLang && this.state.targetLang !== 'en') {
-              let updated = this.state.englishInput || '';
-              if (dels > 0) updated = updated.slice(0, Math.max(0, updated.length - dels));
-              for (const ch of cur.slice(p)) {
-                if (ch === S) continue;
-                if (ch.charCodeAt(0) === 10) { updated = ''; }
-                else updated += ch;
-              }
-              this.state.englishInput = updated;
-              const hubInput = document.getElementById('trans-hub-input');
-              if (hubInput) hubInput.value = updated;
-              this.triggerLiveTranslation(updated);
-              if (this.composing) this.iv = cur;
-              else { el.value = S; this.iv = S; }
-              return;
-            }
-
             for (let i = 0; i < dels; i++) this.wither(now);
             for (const ch of cur.slice(p)) {
               if (ch === S) continue;
@@ -6259,10 +4367,6 @@
             else { el.value = S; this.iv = S; }
           }
           key(e) {
-            if (e.key === 'Escape' && (this.state.mode === 'poster' || this.state.mode === 'langmodel')) {
-              this.setMode('type');
-              return;
-            }
             if (this.state.mode !== 'type') return;
             if (e.metaKey || e.ctrlKey || e.altKey) {
               if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 's') {
@@ -6274,16 +4378,8 @@
             if (e.target && (e.target.tagName === 'BUTTON' || e.target.tagName === 'INPUT') && e.target !== this.inp) return;
             const now = performance.now();
             const A = this.letters.filter(l => !l.dead), last = A[A.length - 1];
-
             if (e.key === 'Backspace') {
               e.preventDefault(); this.mark();
-              this.state.englishInput = (this.state.englishInput || '').slice(0, -1);
-              const hubInput = document.getElementById('trans-hub-input');
-              if (hubInput) hubInput.value = this.state.englishInput;
-              if (this.state.targetLang && this.state.targetLang !== 'en') {
-                this.triggerLiveTranslation(this.state.englishInput);
-                return;
-              }
               if (!last) return;
               last.dead = now;
               const pv = A[A.length - 2];
@@ -6292,34 +4388,15 @@
               if (!this.hasTypedText()) this.flyAwayAll();
               return;
             }
-
             if (e.key === 'Enter') {
               e.preventDefault(); this.mark();
-              this.state.englishInput = '';
-              this.state.translatedText = '';
-              this.state.romanizedText = '';
-              this.state.text = '';
-              const hubInput = document.getElementById('trans-hub-input');
-              if (hubInput) hubInput.value = '';
               this.letters = [];
               this.flyAwayAll();
               this.layout();
-              this.updateLiveTranslationHub();
               return;
             }
-
             if (e.key.length !== 1) return;
             e.preventDefault(); this.mark();
-
-            this.state.englishInput = (this.state.englishInput || '') + e.key;
-            const hubInput = document.getElementById('trans-hub-input');
-            if (hubInput) hubInput.value = this.state.englishInput;
-
-            if (this.state.targetLang && this.state.targetLang !== 'en') {
-              this.triggerLiveTranslation(this.state.englishInput);
-              return;
-            }
-
             this.add(e.key, now);
           }
           mark() {
@@ -7493,13 +5570,10 @@
           }
           buildPoster() {
             if (!this.g) return;
-            const s = this.state, pr = this.preset();
-            const rawText = (s.targetLang && s.targetLang !== 'en' && s.translatedText) ? s.translatedText : (s.text || ' ');
-            const text = (rawText || '').slice(0, 50) || ' ';
+            const s = this.state, pr = this.preset(), text = (s.text || '').slice(0, 40) || ' ';
             this.rand = this.rng(s.seed * 7919 + 1);
             const L = []; let prev = null, uid = 1;
-            const graphemes = cleanGraphemes(text);
-            for (const ch of graphemes) {
+            for (const ch of text) {
               if (ch === ' ') {
                 const sp = { ch: ' ', id: 9000 + uid++, els: [] };
                 L.push(sp); prev = sp; continue;
